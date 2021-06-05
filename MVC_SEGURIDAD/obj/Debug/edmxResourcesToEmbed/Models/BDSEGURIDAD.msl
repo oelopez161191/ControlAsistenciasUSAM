@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SEGURIDADModelStoreContainer" CdmEntityContainer="SEGURIDADEntities">
+    <EntitySetMapping Name="MODULOS">
+      <EntityTypeMapping TypeName="SEGURIDADModel.MODULOS">
+        <MappingFragment StoreEntitySet="MODULOS">
+          <ScalarProperty Name="CODMOD" ColumnName="CODMOD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPERACIONES">
+      <EntityTypeMapping TypeName="SEGURIDADModel.OPERACIONES">
+        <MappingFragment StoreEntitySet="OPERACIONES">
+          <ScalarProperty Name="CODOPERA" ColumnName="CODOPERA" />
+          <ScalarProperty Name="NOMOPERA" ColumnName="NOMOPERA" />
+          <ScalarProperty Name="CODMOD" ColumnName="CODMOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAS">
+      <EntityTypeMapping TypeName="SEGURIDADModel.PERSONAS">
+        <MappingFragment StoreEntitySet="PERSONAS">
+          <ScalarProperty Name="CODPERSONA" ColumnName="CODPERSONA" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="CODUSER" ColumnName="CODUSER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL_OPERA">
+      <EntityTypeMapping TypeName="SEGURIDADModel.ROL_OPERA">
+        <MappingFragment StoreEntitySet="ROL_OPERA">
+          <ScalarProperty Name="CODROLOPERA" ColumnName="CODROLOPERA" />
+          <ScalarProperty Name="CODROL" ColumnName="CODROL" />
+          <ScalarProperty Name="CODOPERA" ColumnName="CODOPERA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="SEGURIDADModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="CODROL" ColumnName="CODROL" />
+          <ScalarProperty Name="NOMROL" ColumnName="NOMROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserState">
+      <EntityTypeMapping TypeName="SEGURIDADModel.UserState">
+        <MappingFragment StoreEntitySet="UserState">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="SEGURIDADModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="CODUSER" ColumnName="CODUSER" />
+          <ScalarProperty Name="USUARIO1" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="CODROL" ColumnName="CODROL" />
+          <ScalarProperty Name="CODESTADO" ColumnName="CODESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

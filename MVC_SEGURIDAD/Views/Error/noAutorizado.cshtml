@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "noAutorizado";
+}
+
+<section class="content-header">
+    <h2>noAutorizado</h2>
+</section>
+
+<section class="content">
+    <div class="error-page">
+        <div class="error-content">
+            <h2 class="headline text-red">Error</h2>
+            <h3>
+                <i class="fa fa-warning text-red">Sin Autorizacion</i>
+            </h3>
+            @if (ViewBag.Operacion != "")
+            { <p>Operacion @ViewBag.Operacion</p> }
+            @if (ViewBag.Modulo != "")
+            { <p>Operacion @ViewBag.Modulo</p>    }
+            @if (ViewBag.msjerror != "")
+            { <p>Operacion @ViewBag.msjerror</p>  }
+        </div>
+    </div>
+</section>
+
+<div class="message" style="background:url(../img/bg.gif) 50% no-repeat;">
+    
+    <h1>404</h1>
+    <h2>There's nothing here.</h2>
+    <h3>Find what you're looking for with our app.</h3>
+    
+</div>

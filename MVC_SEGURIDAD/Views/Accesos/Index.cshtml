@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <form id="frm">
+        Usuario
+        <input type="text" name="user" />
+        Password
+        <input type="text" name="password" />
+        <input type="submit" class="btn btn-success" name="Entrar" />
+    </form>
+
+</div>
+
+@{
+    var a =1;
+}
+@section scripts
+{
+<script>
+    $(document).ready(function(){
+        $("#frm").submit(function(e){
+            e.preventDefault();
+            url="@Url.Content("~/Accesos/Ingresar")"
+            parametros=$(this).serialize();
+	
+            $.post(url,parametros,function(data)
+            {
+              if(data=="1")
+                {
+                    document.location.href="@Url.Content("~/")";
+              }
+              else {
+                  alert(data);
+              }
+            })
+        })
+    })
+
+</script>
+}
+

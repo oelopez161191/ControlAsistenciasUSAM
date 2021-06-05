@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SEGURIDADModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MODULOS">
+    <Key>
+      <PropertyRef Name="CODMOD" />
+    </Key>
+    <Property Name="CODMOD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OPERACIONES" Relationship="Self.FK_OPERACIONES_MODULOS" FromRole="MODULOS" ToRole="OPERACIONES" />
+  </EntityType>
+  <EntityType Name="OPERACIONES">
+    <Key>
+      <PropertyRef Name="CODOPERA" />
+    </Key>
+    <Property Name="CODOPERA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMOPERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CODMOD" Type="Int32" />
+    <NavigationProperty Name="MODULOS" Relationship="Self.FK_OPERACIONES_MODULOS" FromRole="OPERACIONES" ToRole="MODULOS" />
+    <NavigationProperty Name="ROL_OPERA" Relationship="Self.FK_ROL_OPERA_OPERACIONES" FromRole="OPERACIONES" ToRole="ROL_OPERA" />
+  </EntityType>
+  <EntityType Name="PERSONAS">
+    <Key>
+      <PropertyRef Name="CODPERSONA" />
+    </Key>
+    <Property Name="CODPERSONA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRES" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="APELLIDOS" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="GENERO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="CODUSER" Type="Int32" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_PERSONAS_USUARIO" FromRole="PERSONAS" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="ROL_OPERA">
+    <Key>
+      <PropertyRef Name="CODROLOPERA" />
+    </Key>
+    <Property Name="CODROLOPERA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODROL" Type="Int32" />
+    <Property Name="CODOPERA" Type="Int32" />
+    <NavigationProperty Name="OPERACIONES" Relationship="Self.FK_ROL_OPERA_OPERACIONES" FromRole="ROL_OPERA" ToRole="OPERACIONES" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_ROL_OPERA_ROLES" FromRole="ROL_OPERA" ToRole="ROLES" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="CODROL" />
+    </Key>
+    <Property Name="CODROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ROL_OPERA" Relationship="Self.FK_ROL_OPERA_ROLES" FromRole="ROLES" ToRole="ROL_OPERA" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_USUARIO_ROLES" FromRole="ROLES" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="UserState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_USUARIO_ESTADO" FromRole="UserState" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CODUSER" />
+    </Key>
+    <Property Name="CODUSER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USUARIO1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PASSWORD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FECHA" Type="DateTime" Precision="3" />
+    <Property Name="CODROL" Type="Int32" />
+    <Property Name="CODESTADO" Type="Int32" />
+    <NavigationProperty Name="PERSONAS" Relationship="Self.FK_PERSONAS_USUARIO" FromRole="USUARIO" ToRole="PERSONAS" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_USUARIO_ROLES" FromRole="USUARIO" ToRole="ROLES" />
+    <NavigationProperty Name="UserState" Relationship="Self.FK_USUARIO_ESTADO" FromRole="USUARIO" ToRole="UserState" />
+  </EntityType>
+  <Association Name="FK_OPERACIONES_MODULOS">
+    <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="0..1" />
+    <End Role="OPERACIONES" Type="Self.OPERACIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULOS">
+        <PropertyRef Name="CODMOD" />
+      </Principal>
+      <Dependent Role="OPERACIONES">
+        <PropertyRef Name="CODMOD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROL_OPERA_OPERACIONES">
+    <End Role="OPERACIONES" Type="Self.OPERACIONES" Multiplicity="0..1" />
+    <End Role="ROL_OPERA" Type="Self.ROL_OPERA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPERACIONES">
+        <PropertyRef Name="CODOPERA" />
+      </Principal>
+      <Dependent Role="ROL_OPERA">
+        <PropertyRef Name="CODOPERA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONAS_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="PERSONAS" Type="Self.PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="CODUSER" />
+      </Principal>
+      <Dependent Role="PERSONAS">
+        <PropertyRef Name="CODUSER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROL_OPERA_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="ROL_OPERA" Type="Self.ROL_OPERA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="CODROL" />
+      </Principal>
+      <Dependent Role="ROL_OPERA">
+        <PropertyRef Name="CODROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="CODROL" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="CODROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_ESTADO">
+    <End Role="UserState" Type="Self.UserState" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserState">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="CODUSER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SEGURIDADEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MODULOS" EntityType="Self.MODULOS" />
+    <EntitySet Name="OPERACIONES" EntityType="Self.OPERACIONES" />
+    <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" />
+    <EntitySet Name="ROL_OPERA" EntityType="Self.ROL_OPERA" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+    <EntitySet Name="UserState" EntityType="Self.UserState" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <AssociationSet Name="FK_OPERACIONES_MODULOS" Association="Self.FK_OPERACIONES_MODULOS">
+      <End Role="MODULOS" EntitySet="MODULOS" />
+      <End Role="OPERACIONES" EntitySet="OPERACIONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROL_OPERA_OPERACIONES" Association="Self.FK_ROL_OPERA_OPERACIONES">
+      <End Role="OPERACIONES" EntitySet="OPERACIONES" />
+      <End Role="ROL_OPERA" EntitySet="ROL_OPERA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONAS_USUARIO" Association="Self.FK_PERSONAS_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PERSONAS" EntitySet="PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROL_OPERA_ROLES" Association="Self.FK_ROL_OPERA_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="ROL_OPERA" EntitySet="ROL_OPERA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_ROLES" Association="Self.FK_USUARIO_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_ESTADO" Association="Self.FK_USUARIO_ESTADO">
+      <End Role="UserState" EntitySet="UserState" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

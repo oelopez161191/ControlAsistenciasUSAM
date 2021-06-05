@@ -1,0 +1,43 @@
+﻿<!-- Metodo que se utiliza para listar -->
+@model List<MVC_SEGURIDAD.Models.CRUD.MODULOSVista>
+
+@{
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consultar Modulos</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Usuario/Agregar")'" value="Nuevo" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+
+            @foreach (var oUser in Model)
+            {
+                <tr>
+                    <td>@oUser.CODMOD</td>
+                    <td>@oUser.NOMBRE</td>
+                    <td>
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Usuario/Delete/"+oUser.CODMOD)'" value="Eliminar" class="btn btn-danger" />
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Usuario/Actualizar/"+oUser.CODMOD)'" value="Editar" class="btn btn-default" />
+                    </td>
+
+                </tr>
+
+            }
+
+
+        </table>
+    </div>
+</div>
+
+

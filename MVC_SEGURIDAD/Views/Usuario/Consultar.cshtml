@@ -1,0 +1,45 @@
+﻿@model List<MVC_SEGURIDAD.Models.CRUD.USUARIOvista>
+
+@{
+    
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Usuario</h2>
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Usuario/Agregar")'" value="Nuevo" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>COD_ROL</th>
+            <th>COD_ESTADO</th>
+         </tr>
+
+            @foreach (var oUser in Model)
+            {
+                <tr>
+                    <td>@oUser.CODUSER</td>
+                    <td>@oUser.USUARIO</td>
+                    <td>@oUser.CODROL</td>
+                    <td>@oUser.CODESTADO</td>
+                    <td>
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Usuario/Delete/"+oUser.CODUSER)'" value="Eliminar" class="btn btn-danger" />
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Usuario/Actualizar/"+oUser.CODUSER)'" value="Editar" class="btn btn-default" />
+                    </td>
+                   
+                </tr>
+
+            }
+
+
+        </table>
+    </div>
+</div>
