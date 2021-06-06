@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Usuario/Agregar")'" value="Nuevo" />
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Modulos/Agregar")'" value="Nuevo" />
     </div>
 </div>
 <div class="row">
@@ -21,14 +21,14 @@
                 <th>Nombre</th>
             </tr>
 
-            @foreach (var oUser in Model)
+            @foreach (var oModelo in Model)
             {
                 <tr>
-                    <td>@oUser.CODMOD</td>
-                    <td>@oUser.NOMBRE</td>
+                    <td>@oModelo.CODMOD</td>
+                    <td>@oModelo.NOMBRE</td>
                     <td>
-                        <input type="button" onclick="document.location.href='@Url.Content("~/Usuario/Delete/"+oUser.CODMOD)'" value="Eliminar" class="btn btn-danger" />
-                        <input type="button" onclick="document.location.href='@Url.Content("~/Usuario/Actualizar/"+oUser.CODMOD)'" value="Editar" class="btn btn-default" />
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Modulos/Delete/"+oModelo.CODMOD)'" value="Eliminar" class="btn btn-danger" />
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Modulos/Actualizar/"+oModelo.CODMOD)'" value="Editar" class="btn btn-default" />
                     </td>
 
                 </tr>
