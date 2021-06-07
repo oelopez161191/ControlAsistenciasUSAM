@@ -1,0 +1,39 @@
+﻿<!-- Se importa el modelo de datos a usar en la página-->
+@model MVC_SEGURIDAD.Models.CRUD.PERSONAcrudUpdate
+@{
+    ViewBag.Title = "Actualizar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Actualizar</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Actualizar", "Persona", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.HiddenFor(d => d.CODPERSONA)
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+
+            @Html.LabelFor(d => d.NOMBRES)
+            @Html.TextBoxFor(d => d.NOMBRES, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.APELLIDOS)
+            @Html.TextBoxFor(d => d.APELLIDOS, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.GENERO)
+            @Html.TextBoxFor(d => d.GENERO, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.CODUSER)
+            @Html.TextBoxFor(d => d.CODUSER, new { @class = "form-control" })
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
