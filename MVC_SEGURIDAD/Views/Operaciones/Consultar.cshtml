@@ -1,0 +1,44 @@
+﻿<!-- -->
+@model List<MVC_SEGURIDAD.Models.CRUD.OPERACIONESvista>
+@{
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consultar Operaciones</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Operaciones/Agregar")'" value="Nuevo" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+            </tr>
+
+            @foreach (var oModelo in Model)
+            {
+                <tr>
+                    <td>@oModelo.CODOPERA</td>
+                    <td>@oModelo.NOMOPERA</td>
+                    <td>@oModelo.CODMOD</td>
+
+
+                    <td>
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Operaciones/Delete/"+oModelo.CODOPERA)'" value="Eliminar" class="btn btn-danger" />
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Operaciones/Actualizar/"+oModelo.CODOPERA)'" value="Editar" class="btn btn-default" />
+                    </td>
+
+                </tr>
+
+            }
+
+
+        </table>
+    </div>
+</div>

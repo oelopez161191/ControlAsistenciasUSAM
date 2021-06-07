@@ -135,6 +135,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ModulosController.cs" />
+    <Compile Include="Controllers\OperacionesController.cs" />
     <Compile Include="Controllers\SalirController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Filters\Autoriza.cs" />
@@ -165,6 +166,8 @@
     <Compile Include="Models\CRUD\OPERACIONES.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD\OPERACIONEScrud.cs" />
+    <Compile Include="Models\CRUD\OPERACIONESvista.cs" />
     <Compile Include="Models\CRUD\PERSONAS.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
@@ -251,6 +254,10 @@
     <Content Include="Views\Modulos\Actualizar.cshtml" />
     <Content Include="Views\Modulos\Agregar.cshtml" />
     <Content Include="Views\Modulos\Delete.cshtml" />
+    <Content Include="Views\Operaciones\Consultar.cshtml" />
+    <Content Include="Views\Operaciones\Agregar.cshtml" />
+    <Content Include="Views\Operaciones\Actualizar.cshtml" />
+    <Content Include="Views\Operaciones\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
