@@ -4,16 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 //importar clases que se usan en el proyecto
 using MVC_SEGURIDAD.Filters;
 using MVC_SEGURIDAD.Models.CRUD;
 using MVC_SEGURIDAD.Models;
 
-namespace MVC_SEGURIDAD.Controllers
+namespace MVC_SEGURIDAD.Models.CRUD
 {
-    public class ModulosController : Controller
+    public class RolesController : Controller
     {
-        // GET: Modelo
+        // GET: ROLES
         public ActionResult Index()
         {
             return View();
@@ -33,33 +34,35 @@ namespace MVC_SEGURIDAD.Controllers
             return View();
         }
 
-        //Se reciben datos para apregar 
+        // Se reciben los datos para agregar
         [HttpPost]
-        public ActionResult Agregar(MODULOScrudInsert modelo)
+        public ActionResult Agregar(ROLEScrudInsert modelo)
         {
             using (var dbData = new SEGURIDADEntities())
             {
-                MODULOS obj = new MODULOS();
-                obj.NOMBRE = modelo.NOMBRE;
-                dbData.MODULOS.Add(obj);
+                ROLES obj = new ROLES();
+                obj.CODROL = modelo.CODROL;
+                obj.NOMROL = modelo.NOMROL;
+                dbData.ROLES.Add(obj);
                 dbData.SaveChanges();
             }
 
-            return Redirect(Url.Content("~/Modulos/Consultar"));
+            return Redirect(Url.Content("~/Roles/Consultar"));
         }
-
 
         public ActionResult Consultar()
         {
-            List<MODULOSVista> list = null;
+
+            List<ROLESvista> list = null;
+
             using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
-                list = (from d in bDatos.MODULOS
-                        orderby d.CODMOD
-                        select new MODULOSVista
+                list = (from d in bDatos.ROLES
+                        orderby d.CODROL
+                        select new ROLESvista
                         {
-                            CODMOD = d.CODMOD,
-                            NOMBRE = d.NOMBRE
+                            CODROL = d.CODROL,
+                            NOMROL = d.NOMROL
                         }).ToList();
             }
                 return View(list);
@@ -67,26 +70,26 @@ namespace MVC_SEGURIDAD.Controllers
 
         [Autoriza(objOperacion: 3)]
         [HttpPost]
-        //ModulosCrudUpdate hace referencia al modelo que viene de la pagina web
-        public ActionResult Actualizar(MODULOScrudUpdate modelo)
+        //hace referencia al modelo que viene de la pagina web
+        public ActionResult Actualizar(ROLEScrudUpdate modelo)
         {
             //Se valida el modelo que viene 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(modelo);
             }
 
             using (var bDatos = new SEGURIDADEntities())
             {
-                var objModulo = bDatos.MODULOS.Find(modelo.CODMOD);
-                objModulo.CODMOD = modelo.CODMOD;
-                objModulo.NOMBRE = modelo.NOMBRE;
+                var objModulo = bDatos.ROLES.Find(modelo.CODROL);
+                objModulo.CODROL = modelo.CODROL;
+                objModulo.NOMROL = modelo.NOMROL;
 
                 //se ejecuta la actualización 
                 bDatos.Entry(objModulo).State = System.Data.Entity.EntityState.Modified;
                 bDatos.SaveChanges();
             }
-            return Redirect(Url.Content("~/Modulos/Consultar"));
+            return Redirect(Url.Content("~/Roles/Consultar"));
         }
 
         //Accion que se realiza al guardar e editar
@@ -94,30 +97,27 @@ namespace MVC_SEGURIDAD.Controllers
         [Autoriza(objOperacion: 3)]
         public ActionResult Actualizar(int? id)
         {
-            MODULOScrudUpdate modelo = new MODULOScrudUpdate();
+            ROLEScrudUpdate modelo = new ROLEScrudUpdate();
 
-            using (var bDatos = new SEGURIDADEntities())
+            using (var datos = new SEGURIDADEntities())
             {
-                var objModulos = bDatos.MODULOS.Find(id);
-                modelo.CODMOD = objModulos.CODMOD;
-                modelo.NOMBRE = objModulos.NOMBRE;
+                var roles = datos.ROLES.Find(id);
+                modelo.CODROL = roles.CODROL;
+                modelo.NOMROL = roles.NOMROL;
             }
-
             return View(modelo);
         }
 
-        //Solo se utiliza un método para borrar
-        [Autoriza(objOperacion: 2)]
+        //para borrar
         public ActionResult Delete(int? id)
         {
             SEGURIDADEntities db = new SEGURIDADEntities();
-            MODULOS modulo = db.MODULOS.Find(id);
-            db.MODULOS.Remove(modulo);
+            ROLES rol = db.ROLES.Find(id);
+            db.ROLES.Remove(rol);
             db.SaveChanges();
 
-            return Redirect(Url.Content(("~/Modulos/Consultar")));
+            return Redirect(Url.Content(("~/Roles/Consultar")));
         }
-
 
     }
 }

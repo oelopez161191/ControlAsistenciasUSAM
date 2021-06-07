@@ -9,11 +9,12 @@ using MVC_SEGURIDAD.Filters;
 using MVC_SEGURIDAD.Models.CRUD;
 using MVC_SEGURIDAD.Models;
 
+
 namespace MVC_SEGURIDAD.Controllers
 {
-    public class ModulosController : Controller
+    public class PersonaController : Controller
     {
-        // GET: Modelo
+        // GET: Persona
         public ActionResult Index()
         {
             return View();
@@ -35,58 +36,68 @@ namespace MVC_SEGURIDAD.Controllers
 
         //Se reciben datos para apregar 
         [HttpPost]
-        public ActionResult Agregar(MODULOScrudInsert modelo)
+        public ActionResult Agregar(PERSONAcrudInsert modelo)
         {
             using (var dbData = new SEGURIDADEntities())
             {
-                MODULOS obj = new MODULOS();
-                obj.NOMBRE = modelo.NOMBRE;
-                dbData.MODULOS.Add(obj);
+                PERSONAS obj = new PERSONAS();
+                obj.CODPERSONA = modelo.CODPERSONA;
+                obj.NOMBRES = modelo.NOMBRES;
+                obj.APELLIDOS = modelo.APELLIDOS;
+                obj.GENERO = modelo.GENERO;
+                obj.CODUSER= modelo.CODUSER;
+                dbData.PERSONAS.Add(obj);
                 dbData.SaveChanges();
             }
-
-            return Redirect(Url.Content("~/Modulos/Consultar"));
+            return Redirect(Url.Content("~/Persona/Consultar"));
         }
 
 
         public ActionResult Consultar()
         {
-            List<MODULOSVista> list = null;
+            List<PERSONAvista> list = null;
             using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
-                list = (from d in bDatos.MODULOS
-                        orderby d.CODMOD
-                        select new MODULOSVista
+                list = (from d in bDatos.PERSONAS
+                        orderby d.CODPERSONA
+                        select new PERSONAvista
                         {
-                            CODMOD = d.CODMOD,
-                            NOMBRE = d.NOMBRE
+                            CODPERSONA = d.CODPERSONA,
+                            NOMBRES = d.NOMBRES,
+                            APELLIDOS = d.APELLIDOS,
+                            GENERO = d.GENERO,
+                            CODUSER = d.CODUSER
                         }).ToList();
             }
-                return View(list);
+            return View(list);
         }
+
 
         [Autoriza(objOperacion: 3)]
         [HttpPost]
         //ModulosCrudUpdate hace referencia al modelo que viene de la pagina web
-        public ActionResult Actualizar(MODULOScrudUpdate modelo)
+        public ActionResult Actualizar(PERSONAcrudUpdate modelo)
         {
             //Se valida el modelo que viene 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(modelo);
             }
 
             using (var bDatos = new SEGURIDADEntities())
             {
-                var objModulo = bDatos.MODULOS.Find(modelo.CODMOD);
-                objModulo.CODMOD = modelo.CODMOD;
-                objModulo.NOMBRE = modelo.NOMBRE;
+                var objPersona = bDatos.PERSONAS.Find(modelo.CODPERSONA);
+                objPersona.CODPERSONA = modelo.CODPERSONA;
+                objPersona.NOMBRES = modelo.NOMBRES;
+                objPersona.APELLIDOS = modelo.APELLIDOS;
+                objPersona.GENERO = modelo.GENERO;
+                objPersona.CODUSER = modelo.CODUSER;
 
                 //se ejecuta la actualización 
-                bDatos.Entry(objModulo).State = System.Data.Entity.EntityState.Modified;
+                bDatos.Entry(objPersona).State = System.Data.Entity.EntityState.Modified;
                 bDatos.SaveChanges();
             }
-            return Redirect(Url.Content("~/Modulos/Consultar"));
+            return Redirect(Url.Content("~/Persona/Consultar"));
         }
 
         //Accion que se realiza al guardar e editar
@@ -94,13 +105,16 @@ namespace MVC_SEGURIDAD.Controllers
         [Autoriza(objOperacion: 3)]
         public ActionResult Actualizar(int? id)
         {
-            MODULOScrudUpdate modelo = new MODULOScrudUpdate();
+            PERSONAcrudUpdate modelo = new PERSONAcrudUpdate();
 
             using (var bDatos = new SEGURIDADEntities())
             {
-                var objModulos = bDatos.MODULOS.Find(id);
-                modelo.CODMOD = objModulos.CODMOD;
-                modelo.NOMBRE = objModulos.NOMBRE;
+                var objPersona = bDatos.PERSONAS.Find(id);
+                modelo.CODPERSONA = objPersona.CODPERSONA;
+                modelo.NOMBRES = objPersona.NOMBRES;
+                modelo.APELLIDOS = objPersona.APELLIDOS;
+                modelo.GENERO = objPersona.GENERO;
+                modelo.CODUSER = objPersona.CODUSER;
             }
 
             return View(modelo);
@@ -111,13 +125,13 @@ namespace MVC_SEGURIDAD.Controllers
         public ActionResult Delete(int? id)
         {
             SEGURIDADEntities db = new SEGURIDADEntities();
-            MODULOS modulo = db.MODULOS.Find(id);
-            db.MODULOS.Remove(modulo);
+            PERSONAS p = db.PERSONAS.Find(id);
+            db.PERSONAS.Remove(p);
             db.SaveChanges();
 
-            return Redirect(Url.Content(("~/Modulos/Consultar")));
+            return Redirect(Url.Content(("~/Persona/Consultar")));
         }
 
-
     }
+
 }
