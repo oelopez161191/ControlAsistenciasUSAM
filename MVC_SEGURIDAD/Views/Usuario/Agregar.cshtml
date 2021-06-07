@@ -6,6 +6,7 @@
 }
 
 <h2>Agregar</h2>
+<br />
 <div class="row">
     <div class="col-md-12">
        @using (Html.BeginForm("Agregar", "Usuario", FormMethod.Post, new { role = "form", @class = "" }))
@@ -14,24 +15,34 @@
 
            @Html.ValidationMessage("error",new {@class="tex-danger" })
            
-        @Html.LabelFor(d=>d.USUARIO)
-        @Html.TextBoxFor(d => d.USUARIO, new { @class = "form-control" })
-        @Html.ValidationMessage("USUARIO",new { @class = "text-danger" })
+        <div>
+            @Html.LabelFor(d => d.USUARIO)
+                @Html.TextBoxFor(d => d.USUARIO, new { @class = "form-control" })
+                @Html.ValidationMessage("USUARIO", new { @class = "text-danger" })
+        </div>
             
-        @Html.LabelFor(d => d.PASSWORD)
-        @Html.TextBoxFor(d => d.PASSWORD, new { @class = "form-control" })
-        @Html.ValidationMessage("PASSWORD", new { @class = "text-danger" })
+        <div>
+            @Html.LabelFor(d => d.PASSWORD)
+                @Html.TextBoxFor(d => d.PASSWORD, new { @class = "form-control" })
+                @Html.ValidationMessage("PASSWORD", new { @class = "text-danger" })
+        </div>
 
-        @Html.LabelFor(d => d.RePASSWORD)
-        @Html.TextBoxFor(d => d.RePASSWORD, new { @class = "form-control" })
-        @Html.ValidationMessage("RePASSWORD", new { @class = "text-danger" })
+        <div>
+            @Html.LabelFor(d => d.RePASSWORD)
+                @Html.TextBoxFor(d => d.RePASSWORD, new { @class = "form-control" })
+                @Html.ValidationMessage("RePASSWORD", new { @class = "text-danger" })
+        </div>
        
-        @Html.LabelFor(d => d.CODESTADO)
-        @Html.TextBoxFor(d => d.CODESTADO, new { @class = "form-control" })
+        <div>
+            @Html.LabelFor(d => d.CODESTADO)
+                @Html.TextBoxFor(d => d.CODESTADO, new { @class = "form-control" })
+        </div>
 
 
-        @Html.LabelFor(d => d.CODROL)
-        @Html.TextBoxFor(d => d.CODROL, new { @class = "form-control" })
+        <div>
+            @Html.LabelFor(d => d.CODROL)
+                @Html.TextBoxFor(d => d.CODROL, new { @class = "form-control" })
+        </div>
 
         <div style="text-align:right">
             <input type="submit" class="btn btn-success" value="Guardar" />
