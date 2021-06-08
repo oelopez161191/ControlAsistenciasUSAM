@@ -28,7 +28,7 @@ namespace MVC_SEGURIDAD.Controllers
         {
             try
             {
-                using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
+                using (SEGURIDAD_ASISTENCIAEntities bDatos = new SEGURIDAD_ASISTENCIAEntities())
                 {
                     var usr = (from d in bDatos.USUARIO
                                where d.USUARIO1 == user.Trim() &&
