@@ -1,0 +1,30 @@
+﻿@model MVC_SEGURIDAD.Models.CRUD.OPERACIONEScrudInsert
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Agregar", "OPERACIONES", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+
+            @Html.LabelFor(d => d.NOMOPERA)
+            @Html.TextBoxFor(d => d.NOMOPERA, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.CODMOD)
+            @Html.TextBoxFor(d => d.CODMOD, new { @class = "form-control" })
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
