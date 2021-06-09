@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MVC_SEGURIDAD.Models
+namespace MVC_SEGURIDAD.Models.CRUD
 {
-    public class Docentesvista
+    public class DOCENTESvista
     {
         public string id_docente { get; set; }
 

@@ -1,0 +1,44 @@
+﻿<!-- Se importa el modelo de datos a usar en la página-->
+@model MVC_SEGURIDAD.Models.CRUD.MATERIAScrudInsert
+@{ 
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Agregar", "Materias", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+            <div>
+                @Html.LabelFor(d => d.id_materia)
+                @Html.TextBoxFor(d => d.id_materia, new { @class = "form-control" })
+                @Html.ValidationMessage("ID MATERIA", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.nombre_materia)
+                @Html.TextBoxFor(d => d.nombre_materia, new { @class = "form-control" })
+                @Html.ValidationMessage("MATERIA", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.facultad)
+                @Html.TextBoxFor(d => d.facultad, new { @class = "form-control" })
+                @Html.ValidationMessage("FACULTAD", new { @class = "text-danger" })
+            </div>
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
+

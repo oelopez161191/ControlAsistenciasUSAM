@@ -132,8 +132,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccesosController.cs" />
+    <Compile Include="Controllers\DocenteController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\ModulosController.cs" />
     <Compile Include="Controllers\SalirController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -169,6 +171,8 @@
     <Compile Include="Models\CRUD\Docentes.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD\DOCENTEScrud.cs" />
+    <Compile Include="Models\CRUD\DOCENTESvista.cs" />
     <Compile Include="Models\CRUD\Grupos.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
@@ -181,6 +185,8 @@
     <Compile Include="Models\CRUD\Materia.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD\MATERIAScrud.cs" />
+    <Compile Include="Models\CRUD\MATERIASvista.cs" />
     <Compile Include="Models\CRUD\MODULOScrud.cs" />
     <Compile Include="Models\CRUD\MODULOSVista.cs" />
     <Compile Include="Models\CRUD\MODULOS.cs">
@@ -272,6 +278,14 @@
     <Content Include="Views\Usuario\Consultar.cshtml" />
     <Content Include="Views\Home\Prueba.cshtml" />
     <Content Include="Views\Modulos\Consultar.cshtml" />
+    <Content Include="Views\Docente\Consultar.cshtml" />
+    <Content Include="Views\Materias\Consultar.cshtml" />
+    <Content Include="Views\Docente\Agregar.cshtml" />
+    <Content Include="Views\Materias\Agregar.cshtml" />
+    <Content Include="Views\Docente\Borrar.cshtml" />
+    <Content Include="Views\Materias\Borrar.cshtml" />
+    <Content Include="Views\Materias\Actualizar.cshtml" />
+    <Content Include="Views\Docente\Actualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

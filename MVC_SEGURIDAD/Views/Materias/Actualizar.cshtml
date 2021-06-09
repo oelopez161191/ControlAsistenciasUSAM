@@ -1,0 +1,39 @@
+﻿<!-- Se importa el modelo de datos a usar en la página-->
+@model MVC_SEGURIDAD.Models.CRUD.MATERIAScrudUpdate
+@{ 
+    ViewBag.Title = "Actualizar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Actualizar Materia</h2>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Actualizar", "Materias", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.HiddenFor(d => d.id_materia)
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+
+            <div>
+                @Html.LabelFor(d => d.nombre_materia)
+                @Html.TextBoxFor(d => d.nombre_materia, new { @class = "form-control" })
+                @Html.ValidationMessage("NOMBRE MATERIA", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.facultad)
+                @Html.TextBoxFor(d => d.facultad, new { @class = "form-control" })
+                @Html.ValidationMessage("FACULTAD", new { @class = "text-danger" })
+            </div>
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
+

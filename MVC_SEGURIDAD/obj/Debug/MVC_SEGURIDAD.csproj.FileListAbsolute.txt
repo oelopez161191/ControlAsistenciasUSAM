@@ -153,6 +153,7 @@ D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\o
 D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CopyComplete
 D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
 D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CoreCompileInputs.cache
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\csc.exe
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -202,7 +203,6 @@ D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Deployment.resources.dll
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Razor.resources.dll
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojAssemblyReference.cache
-D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CoreCompileInputs.cache
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CopyComplete
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
