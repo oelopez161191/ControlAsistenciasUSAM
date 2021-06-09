@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -141,6 +142,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD\Alumnos.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Alumnos_Horario.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Asistencia.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CRUD\BDSEGURIDAD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +165,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDSEGURIDAD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Docentes.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Grupos.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\horario.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Horario_Materia.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Materia.cs">
+      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\MODULOScrud.cs" />
     <Compile Include="Models\CRUD\MODULOSVista.cs" />

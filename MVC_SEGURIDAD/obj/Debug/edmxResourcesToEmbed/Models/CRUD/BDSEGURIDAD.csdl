@@ -32,6 +32,42 @@
       <End Role="UserState" EntitySet="UserState" />
       <End Role="USUARIO" EntitySet="USUARIO" />
     </AssociationSet>
+    <EntitySet Name="Alumnos" EntityType="SEGURIDADModel.Alumnos" />
+    <EntitySet Name="Alumnos_Horario" EntityType="SEGURIDADModel.Alumnos_Horario" />
+    <EntitySet Name="Asistencia" EntityType="SEGURIDADModel.Asistencia" />
+    <EntitySet Name="Docentes" EntityType="SEGURIDADModel.Docentes" />
+    <EntitySet Name="Grupos" EntityType="SEGURIDADModel.Grupos" />
+    <EntitySet Name="horario" EntityType="SEGURIDADModel.horario" />
+    <EntitySet Name="Horario_Materia" EntityType="SEGURIDADModel.Horario_Materia" />
+    <EntitySet Name="Materia" EntityType="SEGURIDADModel.Materia" />
+    <AssociationSet Name="FK_Alumnos_Horario_Alumnos" Association="SEGURIDADModel.FK_Alumnos_Horario_Alumnos">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Alumnos_Horario" EntitySet="Alumnos_Horario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumnos_Horario_Grupos" Association="SEGURIDADModel.FK_Alumnos_Horario_Grupos">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="Alumnos_Horario" EntitySet="Alumnos_Horario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asistencia_Alumnos_Horario" Association="SEGURIDADModel.FK_Asistencia_Alumnos_Horario">
+      <End Role="Alumnos_Horario" EntitySet="Alumnos_Horario" />
+      <End Role="Asistencia" EntitySet="Asistencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Materia_Docentes" Association="SEGURIDADModel.FK_Horario_Materia_Docentes">
+      <End Role="Docentes" EntitySet="Docentes" />
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupos_Horario_Materia" Association="SEGURIDADModel.FK_Grupos_Horario_Materia">
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Materia_horario" Association="SEGURIDADModel.FK_Horario_Materia_horario">
+      <End Role="horario" EntitySet="horario" />
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Materia_Materia" Association="SEGURIDADModel.FK_Horario_Materia_Materia">
+      <End Role="Materia" EntitySet="Materia" />
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="MODULOS">
     <Key>
@@ -172,6 +208,171 @@
       </Principal>
       <Dependent Role="USUARIO">
         <PropertyRef Name="CODESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="id_alumno" />
+    </Key>
+    <Property Name="id_alumno" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="correo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="carrera" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Alumnos_Horario" Relationship="SEGURIDADModel.FK_Alumnos_Horario_Alumnos" FromRole="Alumnos" ToRole="Alumnos_Horario" />
+  </EntityType>
+  <EntityType Name="Alumnos_Horario">
+    <Key>
+      <PropertyRef Name="id_alumnohorario" />
+    </Key>
+    <Property Name="id_alumnohorario" Type="Int32" Nullable="false" />
+    <Property Name="alumno" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="grupo" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Alumnos" Relationship="SEGURIDADModel.FK_Alumnos_Horario_Alumnos" FromRole="Alumnos_Horario" ToRole="Alumnos" />
+    <NavigationProperty Name="Grupos" Relationship="SEGURIDADModel.FK_Alumnos_Horario_Grupos" FromRole="Alumnos_Horario" ToRole="Grupos" />
+    <NavigationProperty Name="Asistencia" Relationship="SEGURIDADModel.FK_Asistencia_Alumnos_Horario" FromRole="Alumnos_Horario" ToRole="Asistencia" />
+  </EntityType>
+  <EntityType Name="Asistencia">
+    <Key>
+      <PropertyRef Name="id_asistencia" />
+    </Key>
+    <Property Name="id_asistencia" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="alumnos_horarios" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Alumnos_Horario" Relationship="SEGURIDADModel.FK_Asistencia_Alumnos_Horario" FromRole="Asistencia" ToRole="Alumnos_Horario" />
+  </EntityType>
+  <EntityType Name="Docentes">
+    <Key>
+      <PropertyRef Name="id_docente" />
+    </Key>
+    <Property Name="id_docente" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="correo" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Horario_Materia" Relationship="SEGURIDADModel.FK_Horario_Materia_Docentes" FromRole="Docentes" ToRole="Horario_Materia" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+    </Key>
+    <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="horario_materia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Alumnos_Horario" Relationship="SEGURIDADModel.FK_Alumnos_Horario_Grupos" FromRole="Grupos" ToRole="Alumnos_Horario" />
+    <NavigationProperty Name="Horario_Materia1" Relationship="SEGURIDADModel.FK_Grupos_Horario_Materia" FromRole="Grupos" ToRole="Horario_Materia" />
+  </EntityType>
+  <EntityType Name="horario">
+    <Key>
+      <PropertyRef Name="id_horario" />
+    </Key>
+    <Property Name="id_horario" Type="Int32" Nullable="false" />
+    <Property Name="hora" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Horario_Materia" Relationship="SEGURIDADModel.FK_Horario_Materia_horario" FromRole="horario" ToRole="Horario_Materia" />
+  </EntityType>
+  <EntityType Name="Horario_Materia">
+    <Key>
+      <PropertyRef Name="codigo_horariomateria" />
+    </Key>
+    <Property Name="codigo_horariomateria" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="horario" Type="Int32" Nullable="false" />
+    <Property Name="materia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="docente" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Docentes" Relationship="SEGURIDADModel.FK_Horario_Materia_Docentes" FromRole="Horario_Materia" ToRole="Docentes" />
+    <NavigationProperty Name="Grupos" Relationship="SEGURIDADModel.FK_Grupos_Horario_Materia" FromRole="Horario_Materia" ToRole="Grupos" />
+    <NavigationProperty Name="horario1" Relationship="SEGURIDADModel.FK_Horario_Materia_horario" FromRole="Horario_Materia" ToRole="horario" />
+    <NavigationProperty Name="Materia1" Relationship="SEGURIDADModel.FK_Horario_Materia_Materia" FromRole="Horario_Materia" ToRole="Materia" />
+  </EntityType>
+  <EntityType Name="Materia">
+    <Key>
+      <PropertyRef Name="id_materia" />
+    </Key>
+    <Property Name="id_materia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nombre_materia" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="facultad" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Horario_Materia" Relationship="SEGURIDADModel.FK_Horario_Materia_Materia" FromRole="Materia" ToRole="Horario_Materia" />
+  </EntityType>
+  <Association Name="FK_Alumnos_Horario_Alumnos">
+    <End Type="SEGURIDADModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="SEGURIDADModel.Alumnos_Horario" Role="Alumnos_Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Alumnos_Horario">
+        <PropertyRef Name="alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumnos_Horario_Grupos">
+    <End Type="SEGURIDADModel.Grupos" Role="Grupos" Multiplicity="1" />
+    <End Type="SEGURIDADModel.Alumnos_Horario" Role="Alumnos_Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="id_grupo" />
+      </Principal>
+      <Dependent Role="Alumnos_Horario">
+        <PropertyRef Name="grupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asistencia_Alumnos_Horario">
+    <End Type="SEGURIDADModel.Alumnos_Horario" Role="Alumnos_Horario" Multiplicity="1" />
+    <End Type="SEGURIDADModel.Asistencia" Role="Asistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos_Horario">
+        <PropertyRef Name="id_alumnohorario" />
+      </Principal>
+      <Dependent Role="Asistencia">
+        <PropertyRef Name="alumnos_horarios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Materia_Docentes">
+    <End Type="SEGURIDADModel.Docentes" Role="Docentes" Multiplicity="1" />
+    <End Type="SEGURIDADModel.Horario_Materia" Role="Horario_Materia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Docentes">
+        <PropertyRef Name="id_docente" />
+      </Principal>
+      <Dependent Role="Horario_Materia">
+        <PropertyRef Name="docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupos_Horario_Materia">
+    <End Type="SEGURIDADModel.Horario_Materia" Role="Horario_Materia" Multiplicity="0..1" />
+    <End Type="SEGURIDADModel.Grupos" Role="Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Horario_Materia">
+        <PropertyRef Name="codigo_horariomateria" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="horario_materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Materia_horario">
+    <End Type="SEGURIDADModel.horario" Role="horario" Multiplicity="1" />
+    <End Type="SEGURIDADModel.Horario_Materia" Role="Horario_Materia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="horario">
+        <PropertyRef Name="id_horario" />
+      </Principal>
+      <Dependent Role="Horario_Materia">
+        <PropertyRef Name="horario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Materia_Materia">
+    <End Type="SEGURIDADModel.Materia" Role="Materia" Multiplicity="1" />
+    <End Type="SEGURIDADModel.Horario_Materia" Role="Horario_Materia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materia">
+        <PropertyRef Name="id_materia" />
+      </Principal>
+      <Dependent Role="Horario_Materia">
+        <PropertyRef Name="materia" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
