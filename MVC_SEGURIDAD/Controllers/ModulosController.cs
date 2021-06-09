@@ -25,7 +25,6 @@ namespace MVC_SEGURIDAD.Controllers
             return RedirectToAction("Index", "Accesos");
         }
 
-        // se recibe la solicitud para redirigir a página de agregar
         [Autoriza(objOperacion: 1)]
         [HttpGet]
         public ActionResult Agregar()
@@ -33,11 +32,11 @@ namespace MVC_SEGURIDAD.Controllers
             return View();
         }
 
-        //Se reciben datos para apregar 
+
         [HttpPost]
         public ActionResult Agregar(MODULOScrudInsert modelo)
         {
-            using (var dbData = new SEGURIDAD_ASISTENCIAEntities())
+            using (var dbData = new SEGURIDADEntities())
             {
                 MODULOS obj = new MODULOS();
                 obj.NOMBRE = modelo.NOMBRE;
@@ -52,10 +51,11 @@ namespace MVC_SEGURIDAD.Controllers
         public ActionResult Consultar()
         {
             List<MODULOSVista> list = null;
-            using (SEGURIDAD_ASISTENCIAEntities bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
                 list = (from d in bDatos.MODULOS
-                        orderby d.CODMOD
+                        where d.CODMOD == 1
+                        orderby d.NOMBRE
                         select new MODULOSVista
                         {
                             CODMOD = d.CODMOD,
@@ -64,60 +64,5 @@ namespace MVC_SEGURIDAD.Controllers
             }
                 return View(list);
         }
-
-        [Autoriza(objOperacion: 3)]
-        [HttpPost]
-        //ModulosCrudUpdate hace referencia al modelo que viene de la pagina web
-        public ActionResult Actualizar(MODULOScrudUpdate modelo)
-        {
-            //Se valida el modelo que viene 
-            if(!ModelState.IsValid)
-            {
-                return View(modelo);
-            }
-
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
-            {
-                var objModulo = bDatos.MODULOS.Find(modelo.CODMOD);
-                objModulo.CODMOD = modelo.CODMOD;
-                objModulo.NOMBRE = modelo.NOMBRE;
-
-                //se ejecuta la actualización 
-                bDatos.Entry(objModulo).State = System.Data.Entity.EntityState.Modified;
-                bDatos.SaveChanges();
-            }
-            return Redirect(Url.Content("~/Modulos/Consultar"));
-        }
-
-        //Accion que se realiza al guardar e editar
-        // a Este se le aqrega la página actualizar
-        [Autoriza(objOperacion: 3)]
-        public ActionResult Actualizar(int? id)
-        {
-            MODULOScrudUpdate modelo = new MODULOScrudUpdate();
-
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
-            {
-                var objModulos = bDatos.MODULOS.Find(id);
-                modelo.CODMOD = objModulos.CODMOD;
-                modelo.NOMBRE = objModulos.NOMBRE;
-            }
-
-            return View(modelo);
-        }
-
-        //Solo se utiliza un método para borrar
-        [Autoriza(objOperacion: 2)]
-        public ActionResult Delete(int? id)
-        {
-            SEGURIDAD_ASISTENCIAEntities db = new SEGURIDAD_ASISTENCIAEntities();
-            MODULOS modulo = db.MODULOS.Find(id);
-            db.MODULOS.Remove(modulo);
-            db.SaveChanges();
-
-            return Redirect(Url.Content(("~/Modulos/Consultar")));
-        }
-
-
     }
 }
