@@ -12,7 +12,7 @@ namespace MVC_SEGURIDAD.Filters
     public class Autoriza : AuthorizeAttribute
     {
         private USUARIO objUser;
-        private SEGURIDAD_ASISTENCIAEntities objDatos = new SEGURIDAD_ASISTENCIAEntities();
+        private SEGURIDADEntities objDatos = new SEGURIDADEntities();
         private int objOperacion;
 
         public Autoriza(int objOperacion =0) {

@@ -38,7 +38,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         [HttpPost]
         public ActionResult Agregar(ROLEScrudInsert modelo)
         {
-            using (var dbData = new SEGURIDAD_ASISTENCIAEntities())
+            using (var dbData = new SEGURIDADEntities())
             {
                 ROLES obj = new ROLES();
                 obj.CODROL = modelo.CODROL;
@@ -55,7 +55,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
 
             List<ROLESvista> list = null;
 
-            using (SEGURIDAD_ASISTENCIAEntities bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
                 list = (from d in bDatos.ROLES
                         orderby d.CODROL
@@ -79,7 +79,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
                 return View(modelo);
             }
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objModulo = bDatos.ROLES.Find(modelo.CODROL);
                 objModulo.CODROL = modelo.CODROL;
@@ -99,7 +99,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         {
             ROLEScrudUpdate modelo = new ROLEScrudUpdate();
 
-            using (var datos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var datos = new SEGURIDADEntities())
             {
                 var roles = datos.ROLES.Find(id);
                 modelo.CODROL = roles.CODROL;
@@ -111,7 +111,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         //para borrar
         public ActionResult Delete(int? id)
         {
-            SEGURIDAD_ASISTENCIAEntities db = new SEGURIDAD_ASISTENCIAEntities();
+            SEGURIDADEntities db = new SEGURIDADEntities();
             ROLES rol = db.ROLES.Find(id);
             db.ROLES.Remove(rol);
             db.SaveChanges();

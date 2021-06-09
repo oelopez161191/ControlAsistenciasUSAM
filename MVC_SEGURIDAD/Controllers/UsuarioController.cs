@@ -36,7 +36,7 @@ namespace MVC_SEGURIDAD.Controllers
                 return View(modelo);
             }
           
-            using (var dbData = new SEGURIDAD_ASISTENCIAEntities())
+            using (var dbData = new SEGURIDADEntities())
             {
                 USUARIO obj = new USUARIO();
                 obj.CODESTADO = 1;
@@ -59,7 +59,7 @@ namespace MVC_SEGURIDAD.Controllers
             {
                 return View(modelo);
             }
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objUser = bDatos.USUARIO.Find(modelo.CodUser);
                 objUser.CODUSER = modelo.CodUser;
@@ -82,7 +82,7 @@ namespace MVC_SEGURIDAD.Controllers
         [Autoriza(objOperacion: 2)]
         public ActionResult Delete(int? id)
         {
-            SEGURIDAD_ASISTENCIAEntities db = new SEGURIDAD_ASISTENCIAEntities();
+            SEGURIDADEntities db = new SEGURIDADEntities();
             USUARIO usuaar = db.USUARIO.Find(id);
             db.USUARIO.Remove(usuaar);
             db.SaveChanges();
@@ -93,7 +93,7 @@ namespace MVC_SEGURIDAD.Controllers
         {
             USUARIOcrudUpdate modelo = new USUARIOcrudUpdate();
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objUser = bDatos.USUARIO.Find(id);
                 modelo.USUARIO = objUser.USUARIO1;
@@ -109,7 +109,7 @@ namespace MVC_SEGURIDAD.Controllers
         public ActionResult Consultar()
         {
             List<USUARIOvista> list = null;
-            using (SEGURIDAD_ASISTENCIAEntities bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
                 list = (from d in bDatos.USUARIO
                         where d.CODESTADO == 1

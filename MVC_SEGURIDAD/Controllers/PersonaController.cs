@@ -38,7 +38,7 @@ namespace MVC_SEGURIDAD.Controllers
         [HttpPost]
         public ActionResult Agregar(PERSONAcrudInsert modelo)
         {
-            using (var dbData = new SEGURIDAD_ASISTENCIAEntities())
+            using (var dbData = new SEGURIDADEntities())
             {
                 PERSONAS obj = new PERSONAS();
                 obj.CODPERSONA = modelo.CODPERSONA;
@@ -56,7 +56,7 @@ namespace MVC_SEGURIDAD.Controllers
         public ActionResult Consultar()
         {
             List<PERSONAvista> list = null;
-            using (SEGURIDAD_ASISTENCIAEntities bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
                 list = (from d in bDatos.PERSONAS
                         orderby d.CODPERSONA
@@ -84,7 +84,7 @@ namespace MVC_SEGURIDAD.Controllers
                 return View(modelo);
             }
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objPersona = bDatos.PERSONAS.Find(modelo.CODPERSONA);
                 objPersona.CODPERSONA = modelo.CODPERSONA;
@@ -107,7 +107,7 @@ namespace MVC_SEGURIDAD.Controllers
         {
             PERSONAcrudUpdate modelo = new PERSONAcrudUpdate();
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objPersona = bDatos.PERSONAS.Find(id);
                 modelo.CODPERSONA = objPersona.CODPERSONA;
@@ -124,7 +124,7 @@ namespace MVC_SEGURIDAD.Controllers
         [Autoriza(objOperacion: 2)]
         public ActionResult Delete(int? id)
         {
-            SEGURIDAD_ASISTENCIAEntities db = new SEGURIDAD_ASISTENCIAEntities();
+            SEGURIDADEntities db = new SEGURIDADEntities();
             PERSONAS p = db.PERSONAS.Find(id);
             db.PERSONAS.Remove(p);
             db.SaveChanges();

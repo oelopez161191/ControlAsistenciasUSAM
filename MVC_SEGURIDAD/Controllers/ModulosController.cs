@@ -37,7 +37,7 @@ namespace MVC_SEGURIDAD.Controllers
         [HttpPost]
         public ActionResult Agregar(MODULOScrudInsert modelo)
         {
-            using (var dbData = new SEGURIDAD_ASISTENCIAEntities())
+            using (var dbData = new SEGURIDADEntities())
             {
                 MODULOS obj = new MODULOS();
                 obj.NOMBRE = modelo.NOMBRE;
@@ -52,7 +52,7 @@ namespace MVC_SEGURIDAD.Controllers
         public ActionResult Consultar()
         {
             List<MODULOSVista> list = null;
-            using (SEGURIDAD_ASISTENCIAEntities bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
                 list = (from d in bDatos.MODULOS
                         orderby d.CODMOD
@@ -76,7 +76,7 @@ namespace MVC_SEGURIDAD.Controllers
                 return View(modelo);
             }
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objModulo = bDatos.MODULOS.Find(modelo.CODMOD);
                 objModulo.CODMOD = modelo.CODMOD;
@@ -96,7 +96,7 @@ namespace MVC_SEGURIDAD.Controllers
         {
             MODULOScrudUpdate modelo = new MODULOScrudUpdate();
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objModulos = bDatos.MODULOS.Find(id);
                 modelo.CODMOD = objModulos.CODMOD;
@@ -110,7 +110,7 @@ namespace MVC_SEGURIDAD.Controllers
         [Autoriza(objOperacion: 2)]
         public ActionResult Delete(int? id)
         {
-            SEGURIDAD_ASISTENCIAEntities db = new SEGURIDAD_ASISTENCIAEntities();
+            SEGURIDADEntities db = new SEGURIDADEntities();
             MODULOS modulo = db.MODULOS.Find(id);
             db.MODULOS.Remove(modulo);
             db.SaveChanges();

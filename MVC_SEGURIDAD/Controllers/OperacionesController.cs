@@ -38,7 +38,7 @@ namespace MVC_SEGURIDAD.Controllers
         [HttpPost]
         public ActionResult Agregar(OPERACIONEScrudInsert modelo)
         {
-            using (var dbData = new SEGURIDAD_ASISTENCIAEntities())
+            using (var dbData = new SEGURIDADEntities())
             {
                 OPERACIONES obj = new OPERACIONES();
                 obj.CODOPERA = modelo.CODOPERA;
@@ -56,7 +56,7 @@ namespace MVC_SEGURIDAD.Controllers
         {
             List<OPERACIONESvista> list = null;
 
-            using (SEGURIDAD_ASISTENCIAEntities datos = new SEGURIDAD_ASISTENCIAEntities())
+            using (SEGURIDADEntities datos = new SEGURIDADEntities())
             {
                 list = (from d in datos.OPERACIONES
                         orderby d.CODOPERA
@@ -83,7 +83,7 @@ namespace MVC_SEGURIDAD.Controllers
                 return View(modelo);
             }
 
-            using (var datos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var datos = new SEGURIDADEntities())
             {
                 var objOperaciones = datos.OPERACIONES.Find(modelo.CODOPERA);
                 objOperaciones.CODOPERA = modelo.CODOPERA;
@@ -106,7 +106,7 @@ namespace MVC_SEGURIDAD.Controllers
         {
             OPERACIONEScrudUpdate modelo = new OPERACIONEScrudUpdate();
 
-            using (var bDatos = new SEGURIDAD_ASISTENCIAEntities())
+            using (var bDatos = new SEGURIDADEntities())
             {
                 var objOperaciones = bDatos.OPERACIONES.Find(id);
                 modelo.CODOPERA = objOperaciones.CODOPERA;
@@ -121,7 +121,7 @@ namespace MVC_SEGURIDAD.Controllers
         [Autoriza(objOperacion: 2)]
         public ActionResult Delete(int? id)
         {
-            SEGURIDAD_ASISTENCIAEntities db = new SEGURIDAD_ASISTENCIAEntities();
+            SEGURIDADEntities db = new SEGURIDADEntities();
             OPERACIONES op = db.OPERACIONES.Find(id);
             db.OPERACIONES.Remove(op);
             db.SaveChanges();

@@ -1,0 +1,102 @@
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\csc.exe
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\vbc.exe
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll.config
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.pdb
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Antlr3.Runtime.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Newtonsoft.Json.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Helpers.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Mvc.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Optimization.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Razor.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\WebGrease.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Helpers.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Mvc.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Optimization.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Razor.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Antlr3.Runtime.pdb
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Newtonsoft.Json.xml
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Razor.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
+C:\Users\Source_Home\documents\visual studio 2015\Projects\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojResolveAssemblyReference.cache
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\csc.exe
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\vbc.exe
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll.config
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.pdb
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Antlr3.Runtime.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Newtonsoft.Json.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Helpers.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Mvc.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Optimization.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Razor.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\WebGrease.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Helpers.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Mvc.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Optimization.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.Razor.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Antlr3.Runtime.pdb
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\Newtonsoft.Json.xml
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Helpers.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Mvc.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Optimization.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.Razor.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.WebPages.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojResolveAssemblyReference.cache
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
+C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
