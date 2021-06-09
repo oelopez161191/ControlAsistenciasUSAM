@@ -13,10 +13,10 @@ namespace MVC_SEGURIDAD.Models.CRUD
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SEGURIDADEntities : DbContext
+    public partial class SEGURIDAD_ASISTENCIAEntities : DbContext
     {
-        public SEGURIDADEntities()
-            : base("name=SEGURIDADEntities")
+        public SEGURIDAD_ASISTENCIAEntities()
+            : base("name=SEGURIDAD_ASISTENCIAEntities")
         {
         }
     
@@ -25,6 +25,14 @@ namespace MVC_SEGURIDAD.Models.CRUD
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Alumnos> Alumnos { get; set; }
+        public virtual DbSet<Alumnos_Horario> Alumnos_Horario { get; set; }
+        public virtual DbSet<Asistencia> Asistencia { get; set; }
+        public virtual DbSet<Docentes> Docentes { get; set; }
+        public virtual DbSet<Grupos> Grupos { get; set; }
+        public virtual DbSet<horario> horario { get; set; }
+        public virtual DbSet<Horario_Materia> Horario_Materia { get; set; }
+        public virtual DbSet<Materia> Materia { get; set; }
         public virtual DbSet<MODULOS> MODULOS { get; set; }
         public virtual DbSet<OPERACIONES> OPERACIONES { get; set; }
         public virtual DbSet<PERSONAS> PERSONAS { get; set; }
