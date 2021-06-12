@@ -1,8 +1,9 @@
-﻿@model MVC_SEGURIDAD.Models.CRUD.GRUPOScrudInsert
+﻿@using MVC_SEGURIDAD.Models.CRUD
+@model GRUPOScrudInsert
 
 @{
     ViewBag.Title = "Agregar";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_SpecialLayout.cshtml";
 }
 
 <h2>Agregar Grupos</h2>
@@ -22,17 +23,26 @@
             </div>
 
             <div>
-                @Html.LabelFor(d => d.horario_materia)
+                @Html.LabelFor(d => "Asignar horario")
                 @Html.TextBoxFor(d => d.horario_materia, new { @class = "form-control" })
-                @Html.ValidationMessage("DOCENTE", new { @class = "text-danger" })
+                @Html.ValidationMessage("Grupo", new { @class = "text-danger" })
             </div>
 
 
             <div style="text-align:right">
-                <input type="submit" class="btn btn-success" value="Guardar" />
+                <input type="submit" class="btn btn-success" value="Guardar"/>
 
             </div>
 
         }
+
+    <div style="background-color: white">
+        <section>
+
+            @{
+                Html.RenderAction("Consultar", "Grupos");
+            }
+        </section>
+    </div>
     </div>
 </div>

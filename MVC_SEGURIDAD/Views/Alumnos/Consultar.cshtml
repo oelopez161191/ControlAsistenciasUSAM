@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consultar Alumno</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Alumnos/Agregar")'" value="Nuevo" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Carrera</th>
+                <th>estado</th>
+            </tr>
+
+            @foreach (var oModelo in Model)
+            {
+        <tr>
+            <td>@oModelo.id_alumnno</td>
+            <td>@oModelo.nombre</td>
+            <td>@oModelo.apellido</td>
+            <td>@oModelo.correo</td>
+            <td>@oModelo.carrera</td>
+            @{var m = oModelo.estado;}
+
+            @if (m == 1)
+            {
+                <td>Activo</td>
+            }
+            else
+            {
+                <td>Inactivo</td>
+            }
+            <td>
+                <input type="button" onclick="document.location.href='@Url.Content("~/Alumnos/Actualizar/"+oModelo.id_alumnno)'" value="Editar" class="btn btn-default" />
+            </td>
+
+        </tr>
+
+            }
+
+
+        </table>
+    </div>
+</div>

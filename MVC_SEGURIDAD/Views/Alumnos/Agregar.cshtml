@@ -1,0 +1,57 @@
+﻿@using MVC_SEGURIDAD.Models.CRUD
+@model ALUMNOScrudInsert
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Alumno</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Agregar", "Alumnos", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+            <div>
+                @Html.LabelFor(d => d.id_alumnno)
+                @Html.TextBoxFor(d => d.id_alumnno, new { @class = "form-control" })
+                @Html.ValidationMessage("Alumnos", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.nombre)
+                @Html.TextBoxFor(d => d.nombre, new { @class = "form-control" })
+                @Html.ValidationMessage("nombre", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.apellido)
+                @Html.TextBoxFor(d => d.apellido, new { @class = "form-control" })
+                @Html.ValidationMessage("apellido", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.correo)
+                @Html.TextBoxFor(d => d.correo, new { @class = "form-control" })
+                @Html.ValidationMessage("correo", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.carrera)
+                @Html.DropDownList("carrera", new SelectList(Enum.GetValues(typeof(carrera))), "Seleccione facultad", new { @class = "form-control" })
+            </div>
+
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
+
+

@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Docente/Agregar")'" value="Nuevo" />
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Grupos/Agregar")'" value="Nuevo" />
     </div>
 </div>
 <br />
@@ -23,11 +23,10 @@
             @foreach (var oModelo in Model)
             {
                 <tr>
-                    <td>@oModelo.id_docente</td>
+                    <td>@oModelo.id_grupo</td>
                     <td>@oModelo.horario_materia</td>
                     <td>
-                        <input type="button" onclick="document.location.href='@Url.Content("~/Docente/Delete/"+oModelo.id_docente)'" value="Eliminar" class="btn btn-danger" />
-                        <input type="button" onclick="document.location.href='@Url.Content("~/Docente/Actualizar/"+oModelo.id_docente)'" value="Editar" class="btn btn-default" />
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Grupos/Actualizar/"+oModelo.id_grupo)'" value="Editar" class="btn btn-default" />
                     </td>
 
                 </tr>
