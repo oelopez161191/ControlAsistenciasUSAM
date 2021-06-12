@@ -179,6 +179,8 @@
     <Compile Include="Models\CRUD\horario.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD\HORARIOcrud.cs" />
+    <Compile Include="Models\CRUD\HORARIOvista.cs" />
     <Compile Include="Models\CRUD\Horario_Materia.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
@@ -280,12 +282,12 @@
     <Content Include="Views\Modulos\Consultar.cshtml" />
     <Content Include="Views\Docente\Consultar.cshtml" />
     <Content Include="Views\Materias\Consultar.cshtml" />
-    <Content Include="Views\Docente\Agregar.cshtml" />
     <Content Include="Views\Materias\Agregar.cshtml" />
     <Content Include="Views\Docente\Borrar.cshtml" />
     <Content Include="Views\Materias\Borrar.cshtml" />
     <Content Include="Views\Materias\Actualizar.cshtml" />
     <Content Include="Views\Docente\Actualizar.cshtml" />
+    <Content Include="Views\Docente\Agregar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

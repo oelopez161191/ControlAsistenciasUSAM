@@ -44,7 +44,8 @@ namespace MVC_SEGURIDAD.Controllers
                 Materia obj = new Materia();
                 obj.id_materia = modelo.id_materia;
                 obj.nombre_materia = modelo.nombre_materia;
-                obj.facultad = modelo.facultad;
+                obj.facultad = Definirfacultad((int)modelo.facultad);
+                obj.estado = 1;
                 dbData.Materia.Add(obj);
                 dbData.SaveChanges();
             }
@@ -52,6 +53,22 @@ namespace MVC_SEGURIDAD.Controllers
             return Redirect(Url.Content("~/Materias/Consultar"));
         }
 
+        [Autoriza(objOperacion: 3)]
+        public ActionResult Actualizar(string id)
+        {
+            MATERIAScrudUpdate modelo = new MATERIAScrudUpdate();
+
+            using (var bDatos = new SEGURIDADEntities())
+            {
+                var objMateria = bDatos.Materia.Find(id);
+                objMateria.id_materia = modelo.id_materia;
+                objMateria.nombre_materia = modelo.nombre_materia;
+                objMateria.facultad = Definirfacultad((int)modelo.facultad); 
+                objMateria.estado = (int)modelo.estado;
+
+            }
+            return View(modelo);
+        }
 
         [Autoriza(objOperacion: 3)]
         [HttpPost]
@@ -65,13 +82,47 @@ namespace MVC_SEGURIDAD.Controllers
             {
                 var objMateria = bDatos.Materia.Find(modelo.id_materia);
                 objMateria.nombre_materia = modelo.nombre_materia;
-                objMateria.facultad = modelo.facultad;
+                objMateria.facultad = Definirfacultad((int)modelo.facultad);
+                objMateria.estado = (int)modelo.estado;
 
                 bDatos.Entry(objMateria).State = System.Data.Entity.EntityState.Modified;
                 bDatos.SaveChanges();
             }
             return Redirect(Url.Content("~/Materias/Consultar"));
         }
+
+        public string Definirfacultad(int f)
+        {
+            String facultad = "";
+
+            if (f == 0)
+            {
+                facultad = "Ciencias Empresariales";
+            }
+            else if (f == 1)
+            {
+                facultad = "Jurisprudencia y Ciencias_Sociales";
+            }
+            else if (f == 2)
+            {
+                facultad = "Medicina";
+            }
+            else if (f == 3)
+            {
+                facultad = "Medicina Veterinaria y Zootecnía";
+            }
+            else if (f == 4)
+            {
+                facultad = "Cirugia Dental";
+            }
+            else 
+            {
+                facultad = "Quimica y Farmacia";
+            }
+
+            return facultad;
+        }
+        
 
         [Autoriza(objOperacion: 2)]
         public ActionResult Delete(string id)
@@ -82,22 +133,7 @@ namespace MVC_SEGURIDAD.Controllers
             db.SaveChanges();
             return Redirect(Url.Content("~/Materia/Consultar"));
         }
-
-        [Autoriza(objOperacion: 3)]
-        public ActionResult Actualizar(string id)
-        {
-            MATERIAScrudUpdate modelo = new MATERIAScrudUpdate();
-
-            using (var bDatos = new SEGURIDADEntities())
-            {
-                var objdocente = bDatos.Materia.Find(id);
-                objdocente.id_materia = modelo.id_materia;
-                objdocente.nombre_materia = modelo.nombre_materia;
-                objdocente.facultad = modelo.facultad;
-
-            }
-            return View(modelo);
-        }
+       
         //  [Autoriza(objOperacion: 4)]
         public ActionResult Consultar()
         {
@@ -111,6 +147,7 @@ namespace MVC_SEGURIDAD.Controllers
                             id_materia = d.id_materia,
                             nombre_materia = d.nombre_materia,
                             facultad = d.facultad,
+                            estado = d.estado,
                         }).ToList();
 
 
@@ -118,5 +155,6 @@ namespace MVC_SEGURIDAD.Controllers
 
             return View(list);
         }
+
     }
 }

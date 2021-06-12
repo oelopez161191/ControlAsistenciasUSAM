@@ -110,6 +110,7 @@ namespace MVC_SEGURIDAD.Controllers
             using (var bDatos = new SEGURIDADEntities())
             {
                 var objDocentes = bDatos.Docentes.Find(id);
+                objDocentes.id_docente = modelo.id_docente;
                 modelo.nombre = objDocentes.nombre;
                 modelo.apellido = objDocentes.apellido;
                 modelo.correo = objDocentes.correo;

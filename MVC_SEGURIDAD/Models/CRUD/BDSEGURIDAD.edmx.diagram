@@ -18,21 +18,21 @@
         <AssociationConnector Association="SEGURIDADModel.FK_ROL_OPERA_ROLES" />
         <AssociationConnector Association="SEGURIDADModel.FK_USUARIO_ROLES" />
         <AssociationConnector Association="SEGURIDADModel.FK_USUARIO_UserState" />
-        <EntityTypeShape EntityType="SEGURIDADModel.Alumnos" Width="1.5" PointX="9.375" PointY="12.125" />
-        <EntityTypeShape EntityType="SEGURIDADModel.Alumnos_Horario" Width="1.5" PointX="11.625" PointY="9.125" />
         <EntityTypeShape EntityType="SEGURIDADModel.Asistencia" Width="1.5" PointX="13.875" PointY="9.25" />
         <EntityTypeShape EntityType="SEGURIDADModel.Docentes" Width="1.5" PointX="4.875" PointY="9.25" />
         <EntityTypeShape EntityType="SEGURIDADModel.Grupos" Width="1.5" PointX="9.375" PointY="9.375" />
-        <EntityTypeShape EntityType="SEGURIDADModel.horario" Width="1.5" PointX="7.25" PointY="13" />
         <EntityTypeShape EntityType="SEGURIDADModel.Horario_Materia" Width="1.5" PointX="7.125" PointY="9" />
         <EntityTypeShape EntityType="SEGURIDADModel.Materia" Width="1.5" PointX="3.75" PointY="12.125" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_Docentes" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Grupos_Horario_Materia" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_Materia" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Alumnos" Width="1.5" PointX="11.5" PointY="8" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Alumnos_Horario" Width="1.5" PointX="11.25" PointY="11.875" />
         <AssociationConnector Association="SEGURIDADModel.FK_Alumnos_Horario_Alumnos" />
         <AssociationConnector Association="SEGURIDADModel.FK_Alumnos_Horario_Grupos" />
         <AssociationConnector Association="SEGURIDADModel.FK_Asistencia_Alumnos_Horario" />
-        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_Docentes" />
-        <AssociationConnector Association="SEGURIDADModel.FK_Grupos_Horario_Materia" />
-        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_horario" />
-        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_Materia" />
+        <EntityTypeShape EntityType="SEGURIDADModel.horario" Width="1.5" PointX="7.5" PointY="12.875" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_horario1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

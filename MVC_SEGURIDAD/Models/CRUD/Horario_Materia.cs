@@ -28,7 +28,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         public virtual Docentes Docentes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Grupos> Grupos { get; set; }
-        public virtual horario horario1 { get; set; }
         public virtual Materia Materia1 { get; set; }
+        public virtual horario horario11 { get; set; }
     }
 }

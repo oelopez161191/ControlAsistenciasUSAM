@@ -32,13 +32,13 @@ namespace MVC_SEGURIDAD.Models.CRUD
         public virtual DbSet<ROLES> ROLES { get; set; }
         public virtual DbSet<UserState> UserState { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
-        public virtual DbSet<Alumnos> Alumnos { get; set; }
-        public virtual DbSet<Alumnos_Horario> Alumnos_Horario { get; set; }
         public virtual DbSet<Asistencia> Asistencia { get; set; }
         public virtual DbSet<Docentes> Docentes { get; set; }
         public virtual DbSet<Grupos> Grupos { get; set; }
-        public virtual DbSet<horario> horario { get; set; }
         public virtual DbSet<Horario_Materia> Horario_Materia { get; set; }
         public virtual DbSet<Materia> Materia { get; set; }
+        public virtual DbSet<Alumnos> Alumnos { get; set; }
+        public virtual DbSet<Alumnos_Horario> Alumnos_Horario { get; set; }
+        public virtual DbSet<horario> horarioSet { get; set; }
     }
 }

@@ -20,11 +20,12 @@ namespace MVC_SEGURIDAD.Models.CRUD
             this.Alumnos_Horario = new HashSet<Alumnos_Horario>();
         }
     
-        public string id_alumno { get; set; }
+        public int id_alumno { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string correo { get; set; }
         public string carrera { get; set; }
+        public int estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Alumnos_Horario> Alumnos_Horario { get; set; }

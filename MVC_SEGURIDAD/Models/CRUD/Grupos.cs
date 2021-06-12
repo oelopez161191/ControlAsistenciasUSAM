@@ -23,8 +23,8 @@ namespace MVC_SEGURIDAD.Models.CRUD
         public string id_grupo { get; set; }
         public string horario_materia { get; set; }
     
+        public virtual Horario_Materia Horario_Materia1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Alumnos_Horario> Alumnos_Horario { get; set; }
-        public virtual Horario_Materia Horario_Materia1 { get; set; }
     }
 }

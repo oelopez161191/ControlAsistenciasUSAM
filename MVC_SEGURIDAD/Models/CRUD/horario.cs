@@ -21,7 +21,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         }
     
         public int id_horario { get; set; }
-        public System.TimeSpan hora { get; set; }
+        public string hora { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Horario_Materia> Horario_Materia { get; set; }

@@ -1,5 +1,6 @@
 ﻿<!-- Se importa el modelo de datos a usar en la página-->
-@model MVC_SEGURIDAD.Models.CRUD.MATERIAScrudInsert
+@using MVC_SEGURIDAD.Models.CRUD
+@model MATERIAScrudInsert
 @{ 
     ViewBag.Title = "Agregar";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -29,8 +30,7 @@
 
             <div>
                 @Html.LabelFor(d => d.facultad)
-                @Html.TextBoxFor(d => d.facultad, new { @class = "form-control" })
-                @Html.ValidationMessage("FACULTAD", new { @class = "text-danger" })
+                @Html.DropDownList("facultad", new SelectList(Enum.GetValues(typeof(facultades))), "Seleccione facultad", new { @class = "form-control" })
             </div>
 
             <div style="text-align:right">

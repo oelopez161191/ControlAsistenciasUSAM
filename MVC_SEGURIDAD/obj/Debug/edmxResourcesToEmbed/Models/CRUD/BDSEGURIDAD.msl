@@ -66,26 +66,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Alumnos">
-      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos">
-        <MappingFragment StoreEntitySet="Alumnos">
-          <ScalarProperty Name="carrera" ColumnName="carrera" />
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="apellido" ColumnName="apellido" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Alumnos_Horario">
-      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos_Horario">
-        <MappingFragment StoreEntitySet="Alumnos_Horario">
-          <ScalarProperty Name="grupo" ColumnName="grupo" />
-          <ScalarProperty Name="alumno" ColumnName="alumno" />
-          <ScalarProperty Name="id_alumnohorario" ColumnName="id_alumnohorario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Asistencia">
       <EntityTypeMapping TypeName="SEGURIDADModel.Asistencia">
         <MappingFragment StoreEntitySet="Asistencia">
@@ -114,14 +94,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="horario">
-      <EntityTypeMapping TypeName="SEGURIDADModel.horario">
-        <MappingFragment StoreEntitySet="horario">
-          <ScalarProperty Name="hora" ColumnName="hora" />
-          <ScalarProperty Name="id_horario" ColumnName="id_horario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Horario_Materia">
       <EntityTypeMapping TypeName="SEGURIDADModel.Horario_Materia">
         <MappingFragment StoreEntitySet="Horario_Materia">
@@ -135,9 +107,39 @@
     <EntitySetMapping Name="Materia">
       <EntityTypeMapping TypeName="SEGURIDADModel.Materia">
         <MappingFragment StoreEntitySet="Materia">
+          <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="facultad" ColumnName="facultad" />
           <ScalarProperty Name="nombre_materia" ColumnName="nombre_materia" />
           <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alumnos">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos">
+        <MappingFragment StoreEntitySet="Alumnos">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alumnos_Horario">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos_Horario">
+        <MappingFragment StoreEntitySet="Alumnos_Horario">
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="alumno" ColumnName="alumno" />
+          <ScalarProperty Name="id_alumnohorario" ColumnName="id_alumnohorario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="horarioSet">
+      <EntityTypeMapping TypeName="SEGURIDADModel.horario">
+        <MappingFragment StoreEntitySet="horario">
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="id_horario" ColumnName="id_horario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
