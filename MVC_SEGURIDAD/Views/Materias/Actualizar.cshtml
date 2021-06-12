@@ -1,0 +1,48 @@
+﻿<!-- Se importa el modelo de datos a usar en la página-->
+@using MVC_SEGURIDAD.Models.CRUD
+@model MATERIAScrudUpdate
+
+@{ 
+    ViewBag.Title = "Actualizar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Actualizar Materia</h2>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Actualizar", "Materias", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+
+            <div>
+                @Html.LabelFor(d => d.id_materia)
+                @Html.TextBoxFor(d => d.id_materia, new { @class = "form-control" })
+                @Html.ValidationMessage("NOMBRE MATERIA", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.nombre_materia)
+                @Html.TextBoxFor(d => d.nombre_materia, new { @class = "form-control" })
+                @Html.ValidationMessage("NOMBRE MATERIA", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.facultad)
+                @Html.DropDownList("facultad", new SelectList(Enum.GetValues(typeof(facultades))), "Seleccione facultad", new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.estado)
+                @Html.DropDownList("estado", new SelectList(Enum.GetValues(typeof(estadosMateria))), "Seleccione estado", new { @class = "form-control" })
+            </div>
+
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
+

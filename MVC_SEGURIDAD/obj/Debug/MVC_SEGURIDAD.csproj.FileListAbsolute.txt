@@ -100,3 +100,162 @@ C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\bin
 C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojResolveAssemblyReference.cache
 C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
 C:\Users\ALUMNO21\Desktop\MVC_SEGURIDAD ARCHIVOS\MVC_SEGURIDAD\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\csc.exe
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\System.Collections.Immutable.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\System.Reflection.Metadata.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\vbc.exe
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe.config
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll.config
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.pdb
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Antlr3.Runtime.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Microsoft.Web.Infrastructure.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Newtonsoft.Json.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Helpers.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Mvc.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Optimization.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Razor.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\WebGrease.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Helpers.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Mvc.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Optimization.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Razor.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Antlr3.Runtime.pdb
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Newtonsoft.Json.xml
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Helpers.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Mvc.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Optimization.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Razor.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.WebPages.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojAssemblyReference.cache
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CoreCompileInputs.cache
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CopyComplete
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
+D:\documentos\progra3\ProyectoAsistencias\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CoreCompileInputs.cache
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\csc.exe
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\System.Collections.Immutable.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\System.Reflection.Metadata.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\vbc.exe
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe.config
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll.config
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.pdb
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Antlr3.Runtime.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\EntityFramework.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Microsoft.Web.Infrastructure.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Newtonsoft.Json.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Helpers.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Mvc.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Optimization.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Razor.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.WebPages.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\WebGrease.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\EntityFramework.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Helpers.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Mvc.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Optimization.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.Razor.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.WebPages.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Antlr3.Runtime.pdb
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\Newtonsoft.Json.xml
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.Helpers.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.Mvc.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.Optimization.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.Razor.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.WebPages.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojAssemblyReference.cache
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CopyComplete
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
+D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\csc.exe
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\System.Collections.Immutable.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\System.Reflection.Metadata.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\vbc.exe
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\roslyn\VBCSCompiler.exe.config
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll.config
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\MVC_SEGURIDAD.pdb
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Antlr3.Runtime.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Microsoft.Web.Infrastructure.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Newtonsoft.Json.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Helpers.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Mvc.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Optimization.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Razor.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\WebGrease.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\EntityFramework.SqlServer.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Helpers.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Mvc.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Optimization.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.Razor.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Deployment.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\System.Web.WebPages.Razor.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Antlr3.Runtime.pdb
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\Newtonsoft.Json.xml
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Helpers.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Mvc.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Optimization.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.Razor.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.WebPages.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csprojAssemblyReference.cache
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CoreCompileInputs.cache
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.csproj.CopyComplete
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.dll
+D:\Documentos LELS\ControlAsistenciasUSAM\MVC_SEGURIDAD\obj\Debug\MVC_SEGURIDAD.pdb

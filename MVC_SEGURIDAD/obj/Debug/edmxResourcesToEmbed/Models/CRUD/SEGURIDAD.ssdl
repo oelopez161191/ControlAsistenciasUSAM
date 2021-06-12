@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SEGURIDADModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="id_alumno" />
+    </Key>
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellido" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="carrera" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Alumnos_Horario">
+    <Key>
+      <PropertyRef Name="id_alumnohorario" />
+    </Key>
+    <Property Name="id_alumnohorario" Type="int" Nullable="false" />
+    <Property Name="alumno" Type="int" Nullable="false" />
+    <Property Name="grupo" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Asistencia">
+    <Key>
+      <PropertyRef Name="id_asistencia" />
+    </Key>
+    <Property Name="id_asistencia" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="alumnos_horarios" Type="int" Nullable="false" />
+    <Property Name="estado" Type="nchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Docentes">
+    <Key>
+      <PropertyRef Name="id_docente" />
+    </Key>
+    <Property Name="id_docente" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellido" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+    </Key>
+    <Property Name="id_grupo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="horario_materia" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="horario">
+    <Key>
+      <PropertyRef Name="id_horario" />
+    </Key>
+    <Property Name="id_horario" Type="int" Nullable="false" />
+    <Property Name="hora" Type="nvarchar" MaxLength="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Horario_Materia">
+    <Key>
+      <PropertyRef Name="codigo_horariomateria" />
+    </Key>
+    <Property Name="codigo_horariomateria" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="horario" Type="int" Nullable="false" />
+    <Property Name="materia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="docente" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Materia">
+    <Key>
+      <PropertyRef Name="id_materia" />
+    </Key>
+    <Property Name="id_materia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre_materia" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="facultad" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MODULOS">
+    <Key>
+      <PropertyRef Name="CODMOD" />
+    </Key>
+    <Property Name="CODMOD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OPERACIONES">
+    <Key>
+      <PropertyRef Name="CODOPERA" />
+    </Key>
+    <Property Name="CODOPERA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMOPERA" Type="varchar" MaxLength="50" />
+    <Property Name="CODMOD" Type="int" />
+  </EntityType>
+  <EntityType Name="PERSONAS">
+    <Key>
+      <PropertyRef Name="CODPERSONA" />
+    </Key>
+    <Property Name="CODPERSONA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRES" Type="nchar" MaxLength="100" />
+    <Property Name="APELLIDOS" Type="nchar" MaxLength="100" />
+    <Property Name="GENERO" Type="nchar" MaxLength="10" />
+    <Property Name="CODUSER" Type="int" />
+  </EntityType>
+  <EntityType Name="ROL_OPERA">
+    <Key>
+      <PropertyRef Name="CODROLOPERA" />
+    </Key>
+    <Property Name="CODROLOPERA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODROL" Type="int" />
+    <Property Name="CODOPERA" Type="int" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="CODROL" />
+    </Key>
+    <Property Name="CODROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMROL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserState">
+    <Key>
+      <PropertyRef Name="CODESTADO" />
+    </Key>
+    <Property Name="CODESTADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CODUSER" />
+    </Key>
+    <Property Name="CODUSER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USUARIO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="10" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="CODROL" Type="int" />
+    <Property Name="CODESTADO" Type="int" />
+  </EntityType>
+  <Association Name="FK_Alumnos_Horario_Alumnos">
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="1" />
+    <End Role="Alumnos_Horario" Type="Self.Alumnos_Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Alumnos_Horario">
+        <PropertyRef Name="alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumnos_Horario_Grupos">
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="1" />
+    <End Role="Alumnos_Horario" Type="Self.Alumnos_Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="id_grupo" />
+      </Principal>
+      <Dependent Role="Alumnos_Horario">
+        <PropertyRef Name="grupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asistencia_Alumnos_Horario">
+    <End Role="Alumnos_Horario" Type="Self.Alumnos_Horario" Multiplicity="1" />
+    <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos_Horario">
+        <PropertyRef Name="id_alumnohorario" />
+      </Principal>
+      <Dependent Role="Asistencia">
+        <PropertyRef Name="alumnos_horarios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupos_Horario_Materia">
+    <End Role="Horario_Materia" Type="Self.Horario_Materia" Multiplicity="0..1" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Horario_Materia">
+        <PropertyRef Name="codigo_horariomateria" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="horario_materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Materia_Docentes">
+    <End Role="Docentes" Type="Self.Docentes" Multiplicity="1" />
+    <End Role="Horario_Materia" Type="Self.Horario_Materia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Docentes">
+        <PropertyRef Name="id_docente" />
+      </Principal>
+      <Dependent Role="Horario_Materia">
+        <PropertyRef Name="docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Materia_horario">
+    <End Role="horario" Type="Self.horario" Multiplicity="1" />
+    <End Role="Horario_Materia" Type="Self.Horario_Materia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="horario">
+        <PropertyRef Name="id_horario" />
+      </Principal>
+      <Dependent Role="Horario_Materia">
+        <PropertyRef Name="horario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Materia_Materia">
+    <End Role="Materia" Type="Self.Materia" Multiplicity="1" />
+    <End Role="Horario_Materia" Type="Self.Horario_Materia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materia">
+        <PropertyRef Name="id_materia" />
+      </Principal>
+      <Dependent Role="Horario_Materia">
+        <PropertyRef Name="materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OPERACIONES_MODULOS">
+    <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="0..1" />
+    <End Role="OPERACIONES" Type="Self.OPERACIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULOS">
+        <PropertyRef Name="CODMOD" />
+      </Principal>
+      <Dependent Role="OPERACIONES">
+        <PropertyRef Name="CODMOD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONAS_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="PERSONAS" Type="Self.PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="CODUSER" />
+      </Principal>
+      <Dependent Role="PERSONAS">
+        <PropertyRef Name="CODUSER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROL_OPERA_OPERACIONES">
+    <End Role="OPERACIONES" Type="Self.OPERACIONES" Multiplicity="0..1" />
+    <End Role="ROL_OPERA" Type="Self.ROL_OPERA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPERACIONES">
+        <PropertyRef Name="CODOPERA" />
+      </Principal>
+      <Dependent Role="ROL_OPERA">
+        <PropertyRef Name="CODOPERA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROL_OPERA_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="ROL_OPERA" Type="Self.ROL_OPERA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="CODROL" />
+      </Principal>
+      <Dependent Role="ROL_OPERA">
+        <PropertyRef Name="CODROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="CODROL" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="CODROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_UserState">
+    <End Role="UserState" Type="Self.UserState" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserState">
+        <PropertyRef Name="CODESTADO" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="CODESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SEGURIDADModelStoreContainer">
+    <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Alumnos_Horario" EntityType="Self.Alumnos_Horario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Asistencia" EntityType="Self.Asistencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Docentes" EntityType="Self.Docentes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grupos" EntityType="Self.Grupos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="horario" EntityType="Self.horario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Horario_Materia" EntityType="Self.Horario_Materia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Materia" EntityType="Self.Materia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULOS" EntityType="Self.MODULOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OPERACIONES" EntityType="Self.OPERACIONES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROL_OPERA" EntityType="Self.ROL_OPERA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserState" EntityType="Self.UserState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Alumnos_Horario_Alumnos" Association="Self.FK_Alumnos_Horario_Alumnos">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Alumnos_Horario" EntitySet="Alumnos_Horario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumnos_Horario_Grupos" Association="Self.FK_Alumnos_Horario_Grupos">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="Alumnos_Horario" EntitySet="Alumnos_Horario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asistencia_Alumnos_Horario" Association="Self.FK_Asistencia_Alumnos_Horario">
+      <End Role="Alumnos_Horario" EntitySet="Alumnos_Horario" />
+      <End Role="Asistencia" EntitySet="Asistencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupos_Horario_Materia" Association="Self.FK_Grupos_Horario_Materia">
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Materia_Docentes" Association="Self.FK_Horario_Materia_Docentes">
+      <End Role="Docentes" EntitySet="Docentes" />
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Materia_horario" Association="Self.FK_Horario_Materia_horario">
+      <End Role="horario" EntitySet="horario" />
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Materia_Materia" Association="Self.FK_Horario_Materia_Materia">
+      <End Role="Materia" EntitySet="Materia" />
+      <End Role="Horario_Materia" EntitySet="Horario_Materia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OPERACIONES_MODULOS" Association="Self.FK_OPERACIONES_MODULOS">
+      <End Role="MODULOS" EntitySet="MODULOS" />
+      <End Role="OPERACIONES" EntitySet="OPERACIONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONAS_USUARIO" Association="Self.FK_PERSONAS_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PERSONAS" EntitySet="PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROL_OPERA_OPERACIONES" Association="Self.FK_ROL_OPERA_OPERACIONES">
+      <End Role="OPERACIONES" EntitySet="OPERACIONES" />
+      <End Role="ROL_OPERA" EntitySet="ROL_OPERA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROL_OPERA_ROLES" Association="Self.FK_ROL_OPERA_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="ROL_OPERA" EntitySet="ROL_OPERA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_ROLES" Association="Self.FK_USUARIO_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_UserState" Association="Self.FK_USUARIO_UserState">
+      <End Role="UserState" EntitySet="UserState" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

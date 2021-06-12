@@ -1,0 +1,49 @@
+﻿@model MVC_SEGURIDAD.Models.CRUD.DocentescrudInsert
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Agregar", "Docente", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+            <div>
+                @Html.LabelFor(d => d.id_docente)
+                @Html.TextBoxFor(d => d.id_docente, new { @class = "form-control" })
+                @Html.ValidationMessage("DOCENTE", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.nombre)
+                @Html.TextBoxFor(d => d.nombre, new { @class = "form-control" })
+                @Html.ValidationMessage("DOCENTE", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.apellido)
+                @Html.TextBoxFor(d => d.apellido, new { @class = "form-control" })
+                @Html.ValidationMessage("APELLIDO", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.correo)
+                @Html.TextBoxFor(d => d.correo, new { @class = "form-control" })
+                @Html.ValidationMessage("CORREO", new { @class = "text-danger" })
+            </div>
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>
+

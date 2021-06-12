@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="da3f6869f4ea4475b4c2dd2c170c0e5d" Name="Diagram1">
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Alumnos" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Alumnos_Horario" Width="1.5" PointX="15" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Asistencia" Width="1.5" PointX="17.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Docentes" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Grupos" Width="1.5" PointX="12.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.horario" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Horario_Materia" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.Materia" Width="1.5" PointX="8.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.MODULOS" Width="1.5" PointX="1.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.OPERACIONES" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.PERSONAS" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.ROL_OPERA" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.ROLES" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.UserState" Width="1.5" PointX="3.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDAD_ASISTENCIAModel.USUARIO" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Alumnos_Horario_Alumnos" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Alumnos_Horario_Grupos" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Asistencia_Alumnos_Horario" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Horario_Materia_Docentes" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Grupos_Horario_Materia" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Horario_Materia_horario" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_Horario_Materia_Materia" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_OPERACIONES_MODULOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_ROL_OPERA_OPERACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_PERSONAS_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_ROL_OPERA_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_USUARIO_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDAD_ASISTENCIAModel.FK_USUARIO_UserState" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
