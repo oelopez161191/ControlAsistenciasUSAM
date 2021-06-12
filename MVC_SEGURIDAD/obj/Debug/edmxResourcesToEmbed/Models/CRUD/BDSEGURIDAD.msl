@@ -18,6 +18,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAS">
+      <EntityTypeMapping TypeName="SEGURIDADModel.PERSONAS">
+        <MappingFragment StoreEntitySet="PERSONAS">
+          <ScalarProperty Name="CODUSER" ColumnName="CODUSER" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="CODPERSONA" ColumnName="CODPERSONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ROL_OPERA">
       <EntityTypeMapping TypeName="SEGURIDADModel.ROL_OPERA">
         <MappingFragment StoreEntitySet="ROL_OPERA">
@@ -62,6 +73,16 @@
           <ScalarProperty Name="alumnos_horarios" ColumnName="alumnos_horarios" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
           <ScalarProperty Name="id_asistencia" ColumnName="id_asistencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Docentes">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Docentes">
+        <MappingFragment StoreEntitySet="Docentes">
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_docente" ColumnName="id_docente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -119,36 +140,6 @@
         <MappingFragment StoreEntitySet="horario">
           <ScalarProperty Name="hora" ColumnName="hora" />
           <ScalarProperty Name="id_horario" ColumnName="id_horario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Alumnos_Horario">
-      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos_Horario">
-        <MappingFragment StoreEntitySet="Alumnos_Horario">
-          <ScalarProperty Name="grupo" ColumnName="grupo" />
-          <ScalarProperty Name="alumno" ColumnName="alumno" />
-          <ScalarProperty Name="id_alumnohorario" ColumnName="id_alumnohorario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PERSONAS1Set">
-      <EntityTypeMapping TypeName="SEGURIDADModel.PERSONAS1">
-        <MappingFragment StoreEntitySet="PERSONAS">
-          <ScalarProperty Name="CODUSER" ColumnName="CODUSER" />
-          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
-          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
-          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
-          <ScalarProperty Name="CODPERSONA" ColumnName="CODPERSONA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Docentes">
-      <EntityTypeMapping TypeName="SEGURIDADModel.Docentes">
-        <MappingFragment StoreEntitySet="Docentes">
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="apellido" ColumnName="apellido" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="id_docente" ColumnName="id_docente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

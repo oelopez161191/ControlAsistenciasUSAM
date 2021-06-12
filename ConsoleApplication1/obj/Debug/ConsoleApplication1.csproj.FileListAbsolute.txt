@@ -17,10 +17,3 @@ D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\ConsoleApplicatio
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 D:\documentos\progra3\ProyectoAsistencias\SEGURIDAD_ASISTENCIA\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
-D:\Documentos LELS\ControlAsistenciasUSAM\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

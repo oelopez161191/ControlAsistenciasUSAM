@@ -132,14 +132,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccesosController.cs" />
-    <Compile Include="Controllers\AlumnosController.cs" />
-    <Compile Include="Controllers\Alumnos_HorarioController.cs" />
-    <Compile Include="Controllers\AsistenciaController.cs" />
     <Compile Include="Controllers\DocenteController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
-    <Compile Include="Controllers\GruposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HttPostAttribute.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\ModulosController.cs" />
     <Compile Include="Controllers\SalirController.cs" />
@@ -149,21 +144,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CRUD\Alumnos_Horariocrud.cs" />
-    <Compile Include="Models\CRUD\Alumnos_Horariovista.cs" />
     <Compile Include="Models\CRUD\Alumnos.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CRUD\ALUMNOScrud.cs" />
-    <Compile Include="Models\CRUD\ALUMNOSvista.cs" />
     <Compile Include="Models\CRUD\Alumnos_Horario.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\Asistencia.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CRUD\ASISTENCIAcrud.cs" />
-    <Compile Include="Models\CRUD\ASISTENCIAvista.cs" />
     <Compile Include="Models\CRUD\BDSEGURIDAD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,8 +176,6 @@
     <Compile Include="Models\CRUD\Grupos.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CRUD\GRUPOScrud.cs" />
-    <Compile Include="Models\CRUD\GRUPOSvista.cs" />
     <Compile Include="Models\CRUD\horario.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
@@ -210,7 +197,7 @@
     <Compile Include="Models\CRUD\OPERACIONES.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CRUD\PERSONAS1.cs">
+    <Compile Include="Models\CRUD\PERSONAS.cs">
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\ROLES.cs">
@@ -301,14 +288,9 @@
     <Content Include="Views\Materias\Actualizar.cshtml" />
     <Content Include="Views\Docente\Actualizar.cshtml" />
     <Content Include="Views\Docente\Agregar.cshtml" />
-    <Content Include="Views\Grupos\Consultar.cshtml" />
-    <Content Include="Views\Grupos\Actualizar.cshtml" />
-    <Content Include="Views\Grupos\Agregar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Alumnos\" />
-    <Folder Include="Views\Alumnos_Horario\" />
     <Folder Include="Views\Salir\" />
   </ItemGroup>
   <ItemGroup>
