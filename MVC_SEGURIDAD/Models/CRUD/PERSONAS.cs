@@ -12,18 +12,14 @@ namespace MVC_SEGURIDAD.Models.CRUD
     using System;
     using System.Collections.Generic;
     
-    public partial class MODULOS
+    public partial class PERSONAS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MODULOS()
-        {
-            this.OPERACIONES = new HashSet<OPERACIONES>();
-        }
+        public int CODPERSONA { get; set; }
+        public string NOMBRES { get; set; }
+        public string APELLIDOS { get; set; }
+        public string GENERO { get; set; }
+        public Nullable<int> CODUSER { get; set; }
     
-        public int CODMOD { get; set; }
-        public string NOMBRE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OPERACIONES> OPERACIONES { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }
