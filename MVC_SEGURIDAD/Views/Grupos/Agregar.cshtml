@@ -1,0 +1,38 @@
+﻿@model MVC_SEGURIDAD.Models.CRUD.GRUPOScrudInsert
+
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Grupos</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Agregar", "Grupos", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+            <div>
+                @Html.LabelFor(d => d.id_grupo)
+                @Html.TextBoxFor(d => d.id_grupo, new { @class = "form-control" })
+                @Html.ValidationMessage("id_grupo", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.horario_materia)
+                @Html.TextBoxFor(d => d.horario_materia, new { @class = "form-control" })
+                @Html.ValidationMessage("DOCENTE", new { @class = "text-danger" })
+            </div>
+
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>

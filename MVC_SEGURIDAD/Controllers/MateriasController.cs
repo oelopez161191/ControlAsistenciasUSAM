@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 //importar clases que se usan en el proyecto
 using MVC_SEGURIDAD.Filters;
 using MVC_SEGURIDAD.Models.CRUD;
-using MVC_SEGURIDAD.Models;
 
 namespace MVC_SEGURIDAD.Controllers
 {

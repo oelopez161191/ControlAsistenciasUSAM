@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_SEGURIDAD", "MVC_SEGURIDAD\MVC_SEGURIDAD.csproj", "{11147277-DECC-4AE8-8A5F-9B20DB021872}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8570AAAA-10A2-4CE2-9083-54515DF94A28}
+		SolutionGuid = {ACBFBF09-DE12-45C9-9AB1-A4879A3D3D6D}
 	EndGlobalSection
 EndGlobal

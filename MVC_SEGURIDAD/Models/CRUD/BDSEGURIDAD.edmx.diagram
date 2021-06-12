@@ -4,17 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2f6c70c796a46a9a086299ef7bcc926" Name="Diagram1">
+      <Diagram DiagramId="d2f6c70c796a46a9a086299ef7bcc926" Name="Diagram1" ZoomLevel="85">
         <EntityTypeShape EntityType="SEGURIDADModel.MODULOS" Width="1.5" PointX="1.5" PointY="7.125" />
         <EntityTypeShape EntityType="SEGURIDADModel.OPERACIONES" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SEGURIDADModel.PERSONAS" Width="1.5" PointX="8.25" PointY="3.625" />
         <EntityTypeShape EntityType="SEGURIDADModel.ROL_OPERA" Width="1.5" PointX="3" PointY="3.75" />
         <EntityTypeShape EntityType="SEGURIDADModel.ROLES" Width="1.5" PointX="0.75" PointY="3.875" />
         <EntityTypeShape EntityType="SEGURIDADModel.UserState" Width="1.5" PointX="3.75" PointY="1" />
         <EntityTypeShape EntityType="SEGURIDADModel.USUARIO" Width="1.5" PointX="6" PointY="3.375" />
         <AssociationConnector Association="SEGURIDADModel.FK_OPERACIONES_MODULOS" />
         <AssociationConnector Association="SEGURIDADModel.FK_ROL_OPERA_OPERACIONES" />
-        <AssociationConnector Association="SEGURIDADModel.FK_PERSONAS_USUARIO" />
         <AssociationConnector Association="SEGURIDADModel.FK_ROL_OPERA_ROLES" />
         <AssociationConnector Association="SEGURIDADModel.FK_USUARIO_ROLES" />
         <AssociationConnector Association="SEGURIDADModel.FK_USUARIO_UserState" />
