@@ -38,7 +38,7 @@ namespace MVC_SEGURIDAD.Controllers
             using (var dbData = new SEGURIDADEntities())
             {
                 Horario_Materia obj = new Horario_Materia();
-                obj.idcodigo_horariomateria = modelo.idcodigo_horariomateria;
+                obj.codigo_horariomateria = modelo.idcodigo_horariomateria;
                 obj.horario = modelo.horario;
                 obj.materia = modelo.materia;
                 obj.docente = modelo.docente;
@@ -57,10 +57,10 @@ namespace MVC_SEGURIDAD.Controllers
             using (SEGURIDADEntities datos = new SEGURIDADEntities())
             {
                 list = (from d in datos.Horario_Materia
-                        orderby d.idcodigo_horariomateria
+                        orderby d.codigo_horariomateria
                         select new HORARIOMATERIAvista
                         {
-                            codigo_horariomateria = d.idcodigo_horariomateria,
+                            codigo_horariomateria = d.codigo_horariomateria,
                             horario = d.horario,
                             materia = d.materia,
                             docente = d.docente
@@ -84,8 +84,8 @@ namespace MVC_SEGURIDAD.Controllers
 
             using (var datos = new SEGURIDADEntities())
             {
-                var objHorario_Materia = datos.Horario_Materia.Find(modelo.id_Horariocontroller);
-                objHorario_Materia.idcodigo_horariomateria = modelo.idcodigo_horariomateria;
+                var objHorario_Materia = datos.Horario_Materia.Find(modelo.idcodigo_horariomateria);
+                objHorario_Materia.codigo_horariomateria = modelo.idcodigo_horariomateria;
                 objHorario_Materia.horario = modelo.horario;
                 objHorario_Materia.materia = modelo.materia;
                 objHorario_Materia.docente = modelo.docente;
@@ -109,7 +109,7 @@ namespace MVC_SEGURIDAD.Controllers
             using (var bDatos = new SEGURIDADEntities())
             {
                 var objHorario_Materia = bDatos.Horario_Materia.Find(id);
-                objHorario_Materia.idcodigo_horariomateria = modelo.idcodigo_horariomateria;
+                modelo.idcodigo_horariomateria = objHorario_Materia.codigo_horariomateria;
                 modelo.horario = objHorario_Materia.horario;
                 modelo.materia = objHorario_Materia.materia;
                 modelo.docente = objHorario_Materia.docente;

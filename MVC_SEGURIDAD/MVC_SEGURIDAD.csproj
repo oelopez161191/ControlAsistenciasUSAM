@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -222,6 +222,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SEGURIDAD.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD\sysdiagrams.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CRUD\UserState.cs">
       <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
@@ -307,12 +310,19 @@
     <Content Include="Views\Grupos\Consultar.cshtml" />
     <Content Include="Views\Grupos\Actualizar.cshtml" />
     <Content Include="Views\Grupos\Agregar.cshtml" />
+    <Content Include="Views\Alumnos\Actualizar.cshtml" />
+    <Content Include="Views\Alumnos\Agregar.cshtml" />
+    <Content Include="Views\Alumnos\Consultar.cshtml" />
+    <Content Include="Views\Alumnos_Horario\Consultar.cshtml" />
+    <Content Include="Views\Alumnos_Horario\Actualizar.cshtml" />
+    <Content Include="Views\Alumnos_Horario\Agregar.cshtml" />
+    <Content Include="Views\Horario_Materia\Consultar.cshtml" />
+    <Content Include="Views\Horario_Materia\Actualizar.cshtml" />
+    <Content Include="Views\Asistencia\Consultar.cshtml" />
+    <Content Include="Views\Horario_Materia\Agregar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Alumnos\" />
-    <Folder Include="Views\Alumnos_Horario\" />
-    <Folder Include="Views\Horario_Materia\" />
     <Folder Include="Views\Salir\" />
   </ItemGroup>
   <ItemGroup>

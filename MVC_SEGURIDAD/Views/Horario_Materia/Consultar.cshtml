@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consultar</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Horario_Materia/Agregar")'" value="Nuevo" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>N°</th>
+                <th>codigo horario</th>
+                <th>codigo materia</th>
+                <th>Identificacion docente</th>
+            </tr>
+
+            @foreach (var oModelo in Model)
+            {
+                <tr>
+                    <td>@oModelo.codigo_horariomateria</td>
+                    <td>@oModelo.horario</td>
+                    <td>@oModelo.materia</td>
+                    <td>@oModelo.docente</td>
+
+
+                    <td>
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Horario_Materia/Actualizar/"+oModelo.id_materia)'" value="Editar" class="btn btn-default" />
+                    </td>
+
+                </tr>
+
+            }
+
+
+        </table>
+    </div>
+</div>
+

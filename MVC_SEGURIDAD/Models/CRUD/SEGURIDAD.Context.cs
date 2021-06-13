@@ -38,6 +38,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         public virtual DbSet<PERSONAS> PERSONAS { get; set; }
         public virtual DbSet<ROL_OPERA> ROL_OPERA { get; set; }
         public virtual DbSet<ROLES> ROLES { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserState> UserState { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
     }

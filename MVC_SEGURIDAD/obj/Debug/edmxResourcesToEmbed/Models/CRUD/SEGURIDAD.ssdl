@@ -49,7 +49,7 @@
       <PropertyRef Name="id_horario" />
     </Key>
     <Property Name="id_horario" Type="int" Nullable="false" />
-    <Property Name="hora" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="hora" Type="time" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="Horario_Materia">
     <Key>
@@ -108,6 +108,16 @@
     </Key>
     <Property Name="CODROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NOMROL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="UserState">
     <Key>
@@ -297,6 +307,7 @@
     <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ROL_OPERA" EntityType="Self.ROL_OPERA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserState" EntityType="Self.UserState" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Alumnos_Horario_Alumnos" Association="Self.FK_Alumnos_Horario_Alumnos">

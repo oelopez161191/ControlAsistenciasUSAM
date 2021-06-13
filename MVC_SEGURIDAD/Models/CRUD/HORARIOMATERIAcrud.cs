@@ -20,6 +20,5 @@ namespace MVC_SEGURIDAD.Models.CRUD
         public int horario { get; set; }
         public string materia { get; set; }
         public string docente { get; set; }
-        public object[] id_Horariocontroller { get; internal set; }
     }
 }

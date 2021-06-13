@@ -57,7 +57,7 @@
       <PropertyRef Name="id_horario" />
     </Key>
     <Property Name="id_horario" Type="Int32" Nullable="false" />
-    <Property Name="hora" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="hora" Type="Time" Nullable="false" Precision="7" />
     <NavigationProperty Name="Horario_Materia" Relationship="Self.FK_Horario_Materia_horario" FromRole="horario" ToRole="Horario_Materia" />
   </EntityType>
   <EntityType Name="Horario_Materia">
@@ -130,6 +130,16 @@
     <Property Name="NOMROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ROL_OPERA" Relationship="Self.FK_ROL_OPERA_ROLES" FromRole="ROLES" ToRole="ROL_OPERA" />
     <NavigationProperty Name="USUARIO" Relationship="Self.FK_USUARIO_ROLES" FromRole="ROLES" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="UserState">
     <Key>
@@ -323,6 +333,7 @@
     <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" />
     <EntitySet Name="ROL_OPERA" EntityType="Self.ROL_OPERA" />
     <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="UserState" EntityType="Self.UserState" />
     <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
     <AssociationSet Name="FK_Alumnos_Horario_Alumnos" Association="Self.FK_Alumnos_Horario_Alumnos">
