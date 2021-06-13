@@ -1,5 +1,5 @@
 ﻿@using MVC_SEGURIDAD.Models.CRUD
-@model ALUMNOScrudUpdate
+@model MVC_SEGURIDAD.Models.CRUD.ALUMNOScrudUpdate
 @{
     ViewBag.Title = "Actualizar";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,7 +14,7 @@
             @Html.HiddenFor(d => d.id_alumno)
             @Html.AntiForgeryToken()
 
-            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+            @Html.ValidationMessage("id", new { @class = "tex-danger" })
 
             <div>
                 @Html.LabelFor(d => d.nombre)

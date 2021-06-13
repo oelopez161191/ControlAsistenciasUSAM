@@ -27,8 +27,8 @@ namespace MVC_SEGURIDAD.Models.CRUD
 
     public enum estadosAlumnos
     {
-        inactivo,
-        activo,
+        inactivo = 0,
+        activo = 1,
     }
 
     public enum carrera

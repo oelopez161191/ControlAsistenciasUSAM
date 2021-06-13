@@ -77,7 +77,7 @@ namespace MVC_SEGURIDAD.Controllers
                 bDatos.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
                 bDatos.SaveChanges();
             }
-            return Redirect(Url.Content("~/Usuarios/Consultar"));
+            return Redirect(Url.Content("~/Alumnos/Consultar"));
         }
 
         [Autoriza(objOperacion:2)]
@@ -90,20 +90,19 @@ namespace MVC_SEGURIDAD.Controllers
             return Redirect(Url.Content("~/Alumnos/consultar"));
         }
         [Autoriza(objOperacion:3)]
-        public ActionResult Actualizar(int? id)
+        public ActionResult Actualizar(int id)
         {
             ALUMNOScrudUpdate modelo = new ALUMNOScrudUpdate();
 
             using(var bDatos = new SEGURIDADEntities())
             {
                 var objAlum = bDatos.Alumnos.Find(id);
-
-                objAlum.id_alumno = modelo.id_alumno;
-                objAlum.nombre = modelo.nombre;
-                objAlum.apellido = modelo.apellido;
-                objAlum.correo = modelo.correo;
-                objAlum.carrera = DefinirCarrera((int)modelo.carrera);
-                objAlum.estado = (int)modelo.estado;
+                modelo.id_alumno = objAlum.id_alumno;
+                modelo.nombre = objAlum.nombre;
+                modelo.apellido = objAlum.apellido;
+                modelo.correo = objAlum.correo;
+                modelo.carrera = (carrera)Enum.Parse(typeof(carrera), objAlum.carrera);
+                modelo.estado =  (estadosAlumnos)objAlum.estado;
             }
             return View(modelo);
         }
@@ -114,7 +113,7 @@ namespace MVC_SEGURIDAD.Controllers
 
             if (f == 0)
             {
-                facultad = "Tecnico Desarrollo de Sofware";
+                facultad = "Tecnico_Desarrollo_de_Sofware";
             }
             else if (f == 1)
             {

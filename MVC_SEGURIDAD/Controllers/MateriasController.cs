@@ -59,11 +59,10 @@ namespace MVC_SEGURIDAD.Controllers
             using (var bDatos = new SEGURIDADEntities())
             {
                 var objMateria = bDatos.Materia.Find(id);
-                objMateria.id_materia = modelo.id_materia;
-                objMateria.nombre_materia = modelo.nombre_materia;
-                objMateria.facultad = Definirfacultad((int)modelo.facultad); 
-                objMateria.estado = (int)modelo.estado;
-
+                modelo.id_materia = objMateria.id_materia;
+                modelo.nombre_materia = objMateria.nombre_materia;
+                modelo.facultad = (facultades)Enum.Parse(typeof(facultades), objMateria.facultad);
+                modelo.estado = (estadosMateria)objMateria.estado;
             }
             return View(modelo);
         }
