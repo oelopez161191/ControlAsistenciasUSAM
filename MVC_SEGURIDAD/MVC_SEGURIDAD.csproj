@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -139,6 +139,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GruposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Horario_MateriaController.cs" />
     <Compile Include="Controllers\HttPostAttribute.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\ModulosController.cs" />
@@ -178,6 +179,8 @@
       <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\HORARIOcrud.cs" />
+    <Compile Include="Models\CRUD\HORARIOMATERIAcrud.cs" />
+    <Compile Include="Models\CRUD\HORARIOMATERIAvista.cs" />
     <Compile Include="Models\CRUD\HORARIOvista.cs" />
     <Compile Include="Models\CRUD\Horario_Materia.cs">
       <DependentUpon>SEGURIDAD.tt</DependentUpon>
@@ -309,6 +312,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Alumnos\" />
     <Folder Include="Views\Alumnos_Horario\" />
+    <Folder Include="Views\Horario_Materia\" />
     <Folder Include="Views\Salir\" />
   </ItemGroup>
   <ItemGroup>
