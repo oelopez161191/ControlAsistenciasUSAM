@@ -47,7 +47,8 @@ namespace MVC_SEGURIDAD.Controllers
                 obj.nombre = modelo.nombre;
                 obj.apellido = modelo.apellido;
                 obj.correo = modelo.correo;
-                obj.carrera = modelo.carrera;
+                obj.carrera = DefinirCarrera((int)modelo.carrera);
+                obj.estado = 1;
                 dbData.Alumnos.Add(obj);
                 dbData.SaveChanges();
             }
@@ -70,7 +71,8 @@ namespace MVC_SEGURIDAD.Controllers
                 objUser.nombre = modelo.nombre;
                 objUser.apellido = modelo.apellido;
                 objUser.correo = modelo.correo;
-                objUser.carrera = modelo.carrera;
+                objUser.carrera = DefinirCarrera((int)modelo.carrera);
+                objUser.estado = (int)modelo.estado;
 
                 bDatos.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
                 bDatos.SaveChanges();
@@ -94,16 +96,47 @@ namespace MVC_SEGURIDAD.Controllers
 
             using(var bDatos = new SEGURIDADEntities())
             {
-                var objUser = bDatos.Alumnos.Find(id);
+                var objAlum = bDatos.Alumnos.Find(id);
 
-                objUser.id_alumno = modelo.id_alumno;
-                objUser.nombre = modelo.nombre;
-                objUser.apellido = modelo.apellido;
-                objUser.correo = modelo.correo;
-                objUser.carrera = modelo.carrera;
+                objAlum.id_alumno = modelo.id_alumno;
+                objAlum.nombre = modelo.nombre;
+                objAlum.apellido = modelo.apellido;
+                objAlum.correo = modelo.correo;
+                objAlum.carrera = DefinirCarrera((int)modelo.carrera);
+                objAlum.estado = (int)modelo.estado;
             }
             return View(modelo);
         }
+
+        public string DefinirCarrera(int f)
+        {
+            String facultad = "";
+
+            if (f == 0)
+            {
+                facultad = "Tecnico Desarrollo de Sofware";
+            }
+            else if (f == 1)
+            {
+                facultad = "Licenciatura_Ciencias_de_la_computacion";
+            }
+            else if (f == 2)
+            {
+                facultad = "Tecnico_en_redes";
+            }
+            else if (f == 3)
+            {
+                facultad = "Doctorado";
+            }
+            else 
+            {
+                facultad = "Lic_Enfermeria";
+            }
+            
+
+            return facultad;
+        }
+
         //  [Autoriza(objOperacion: 4)]
         public ActionResult Consultar()
         {
@@ -111,7 +144,6 @@ namespace MVC_SEGURIDAD.Controllers
             using (SEGURIDADEntities bDatos =new SEGURIDADEntities())
             {
                 list = (from d in bDatos.Alumnos
-                        where d.id_alumno == 1
                         orderby d.id_alumno
                         select new ALUMNOSvista
                         {
@@ -120,6 +152,7 @@ namespace MVC_SEGURIDAD.Controllers
                             apellido = d.apellido,
                             correo = d.correo,
                             carrera = d.carrera,
+                            estado = d.estado,
                         }).ToList();
 
             }

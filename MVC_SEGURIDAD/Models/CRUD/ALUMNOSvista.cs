@@ -12,5 +12,6 @@ namespace MVC_SEGURIDAD.Models.CRUD
         public string apellido { get; set; }
         public string correo { get; set; }
         public string carrera { get; set; }
+        public int estado { get; set; }
     }
 }

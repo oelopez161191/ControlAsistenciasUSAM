@@ -58,6 +58,7 @@
                             <li>@Html.ActionLink("Horarios", "Consultar", "Horarios")</li>
                             <li>@Html.ActionLink("Alumnos", "Consultar", "Alumnos")</li>
                             <li>@Html.ActionLink("Grupos", "Consultar", "Grupos")</li>
+                            <li>@Html.ActionLink("Asistencias", "Consultar", "Asistencia")</li>
 
                         </ul>
                     </li>
@@ -77,12 +78,15 @@
             </div>
         </div>
     </div>
-    <div class="container body-content " style="position:fixed">
+    <div class="container body-content" style="position:fixed;">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
+
+        <div class="container panel-footer">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            </footer>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
