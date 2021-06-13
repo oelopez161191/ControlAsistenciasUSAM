@@ -21,7 +21,7 @@ namespace MVC_SEGURIDAD.Models.CRUD
         }
     
         public int id_alumnohorario { get; set; }
-        public string alumno { get; set; }
+        public int alumno { get; set; }
         public string grupo { get; set; }
     
         public virtual Alumnos Alumnos { get; set; }

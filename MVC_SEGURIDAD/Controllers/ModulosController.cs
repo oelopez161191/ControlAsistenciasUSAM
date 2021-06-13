@@ -25,7 +25,6 @@ namespace MVC_SEGURIDAD.Controllers
             return RedirectToAction("Index", "Accesos");
         }
 
-        // se recibe la solicitud para redirigir a página de agregar
         [Autoriza(objOperacion: 1)]
         [HttpGet]
         public ActionResult Agregar()
@@ -33,7 +32,7 @@ namespace MVC_SEGURIDAD.Controllers
             return View();
         }
 
-        //Se reciben datos para apregar 
+
         [HttpPost]
         public ActionResult Agregar(MODULOScrudInsert modelo)
         {
@@ -55,7 +54,8 @@ namespace MVC_SEGURIDAD.Controllers
             using (SEGURIDADEntities bDatos = new SEGURIDADEntities())
             {
                 list = (from d in bDatos.MODULOS
-                        orderby d.CODMOD
+                        where d.CODMOD == 1
+                        orderby d.NOMBRE
                         select new MODULOSVista
                         {
                             CODMOD = d.CODMOD,

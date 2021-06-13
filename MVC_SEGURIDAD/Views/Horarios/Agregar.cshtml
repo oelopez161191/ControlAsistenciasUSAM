@@ -1,0 +1,35 @@
+﻿@model MVC_SEGURIDAD.Models.CRUD.HORARIOcrudInsert
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Horario</h2>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Agregar", "Horarios", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+            <div>
+                @Html.LabelFor(d => d.id_horario)
+                @Html.TextBoxFor(d => d.id_horario, new { @class = "form-control" })
+                @Html.ValidationMessage("ID", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.hora)
+                @Html.TextBoxFor(d => d.hora, new { @class = "form-control" })
+                @Html.ValidationMessage("HORA", new { @class = "text-danger" })
+            </div>
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>

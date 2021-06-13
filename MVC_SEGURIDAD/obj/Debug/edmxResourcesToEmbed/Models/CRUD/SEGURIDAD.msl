@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SEGURIDADModelStoreContainer" CdmEntityContainer="SEGURIDADEntities">
+    <EntitySetMapping Name="Alumnos">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos">
+        <MappingFragment StoreEntitySet="Alumnos">
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alumnos_Horario">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Alumnos_Horario">
+        <MappingFragment StoreEntitySet="Alumnos_Horario">
+          <ScalarProperty Name="id_alumnohorario" ColumnName="id_alumnohorario" />
+          <ScalarProperty Name="alumno" ColumnName="alumno" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asistencia">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Asistencia">
+        <MappingFragment StoreEntitySet="Asistencia">
+          <ScalarProperty Name="id_asistencia" ColumnName="id_asistencia" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="alumnos_horarios" ColumnName="alumnos_horarios" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Docentes">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Docentes">
+        <MappingFragment StoreEntitySet="Docentes">
+          <ScalarProperty Name="id_docente" ColumnName="id_docente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupos">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Grupos">
+        <MappingFragment StoreEntitySet="Grupos">
+          <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+          <ScalarProperty Name="horario_materia" ColumnName="horario_materia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="horario">
+      <EntityTypeMapping TypeName="SEGURIDADModel.horario">
+        <MappingFragment StoreEntitySet="horario">
+          <ScalarProperty Name="id_horario" ColumnName="id_horario" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horario_Materia">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Horario_Materia">
+        <MappingFragment StoreEntitySet="Horario_Materia">
+          <ScalarProperty Name="codigo_horariomateria" ColumnName="codigo_horariomateria" />
+          <ScalarProperty Name="horario" ColumnName="horario" />
+          <ScalarProperty Name="materia" ColumnName="materia" />
+          <ScalarProperty Name="docente" ColumnName="docente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materia">
+      <EntityTypeMapping TypeName="SEGURIDADModel.Materia">
+        <MappingFragment StoreEntitySet="Materia">
+          <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+          <ScalarProperty Name="nombre_materia" ColumnName="nombre_materia" />
+          <ScalarProperty Name="facultad" ColumnName="facultad" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULOS">
+      <EntityTypeMapping TypeName="SEGURIDADModel.MODULOS">
+        <MappingFragment StoreEntitySet="MODULOS">
+          <ScalarProperty Name="CODMOD" ColumnName="CODMOD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPERACIONES">
+      <EntityTypeMapping TypeName="SEGURIDADModel.OPERACIONES">
+        <MappingFragment StoreEntitySet="OPERACIONES">
+          <ScalarProperty Name="CODOPERA" ColumnName="CODOPERA" />
+          <ScalarProperty Name="NOMOPERA" ColumnName="NOMOPERA" />
+          <ScalarProperty Name="CODMOD" ColumnName="CODMOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAS">
+      <EntityTypeMapping TypeName="SEGURIDADModel.PERSONAS">
+        <MappingFragment StoreEntitySet="PERSONAS">
+          <ScalarProperty Name="CODPERSONA" ColumnName="CODPERSONA" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="CODUSER" ColumnName="CODUSER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL_OPERA">
+      <EntityTypeMapping TypeName="SEGURIDADModel.ROL_OPERA">
+        <MappingFragment StoreEntitySet="ROL_OPERA">
+          <ScalarProperty Name="CODROLOPERA" ColumnName="CODROLOPERA" />
+          <ScalarProperty Name="CODROL" ColumnName="CODROL" />
+          <ScalarProperty Name="CODOPERA" ColumnName="CODOPERA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="SEGURIDADModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="CODROL" ColumnName="CODROL" />
+          <ScalarProperty Name="NOMROL" ColumnName="NOMROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SEGURIDADModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserState">
+      <EntityTypeMapping TypeName="SEGURIDADModel.UserState">
+        <MappingFragment StoreEntitySet="UserState">
+          <ScalarProperty Name="CODESTADO" ColumnName="CODESTADO" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="SEGURIDADModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="CODUSER" ColumnName="CODUSER" />
+          <ScalarProperty Name="USUARIO1" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="CODROL" ColumnName="CODROL" />
+          <ScalarProperty Name="CODESTADO" ColumnName="CODESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

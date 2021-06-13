@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -132,8 +132,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccesosController.cs" />
+    <Compile Include="Controllers\AlumnosController.cs" />
+    <Compile Include="Controllers\Alumnos_HorarioController.cs" />
+    <Compile Include="Controllers\AsistenciaController.cs" />
+    <Compile Include="Controllers\DocenteController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GruposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Horario_MateriaController.cs" />
+    <Compile Include="Controllers\HttPostAttribute.cs" />
+    <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\ModulosController.cs" />
     <Compile Include="Controllers\OperacionesController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
@@ -154,10 +162,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CRUD\BDSEGURIDAD.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDSEGURIDAD.edmx</DependentUpon>
+    <Compile Include="Models\CRUD\Alumnos.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Alumnos_Horario.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Alumnos_Horariocrud.cs" />
+    <Compile Include="Models\CRUD\Alumnos_Horariovista.cs" />
+    <Compile Include="Models\CRUD\ALUMNOScrud.cs" />
+    <Compile Include="Models\CRUD\ALUMNOSvista.cs" />
+    <Compile Include="Models\CRUD\Asistencia.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\ASISTENCIAcrud.cs" />
+    <Compile Include="Models\CRUD\ASISTENCIAvista.cs" />
+    <Compile Include="Models\CRUD\Docentes.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\DOCENTEScrud.cs" />
+    <Compile Include="Models\CRUD\DOCENTESvista.cs" />
+    <Compile Include="Models\CRUD\Grupos.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\GRUPOScrud.cs" />
+    <Compile Include="Models\CRUD\GRUPOSvista.cs" />
+    <Compile Include="Models\CRUD\horario.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\HORARIOcrud.cs" />
+    <Compile Include="Models\CRUD\HORARIOMATERIAcrud.cs" />
+    <Compile Include="Models\CRUD\HORARIOMATERIAvista.cs" />
+    <Compile Include="Models\CRUD\HORARIOvista.cs" />
+    <Compile Include="Models\CRUD\Horario_Materia.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\Materia.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\MATERIAScrud.cs" />
+    <Compile Include="Models\CRUD\MATERIASvista.cs" />
+    <Compile Include="Models\CRUD\MODULOS.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\MODULOScrud.cs" />
     <Compile Include="Models\CRUD\MODULOSVista.cs" />
@@ -165,29 +211,47 @@
       <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\OPERACIONES.cs">
-      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\OPERACIONEScrud.cs" />
     <Compile Include="Models\CRUD\OPERACIONESvista.cs" />
     <Compile Include="Models\CRUD\PERSONAcrud.cs" />
     <Compile Include="Models\CRUD\PERSONAS.cs">
-      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\PERSONAvista.cs" />
     <Compile Include="Models\CRUD\ROLES.cs">
-      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Models\CRUD\ROLEScrud.cs" />
     <Compile Include="Models\CRUD\ROLESvista.cs" />
     <Compile Include="Models\CRUD\ROL_OPERA.cs">
-      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\SEGURIDAD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEGURIDAD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\SEGURIDAD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\SEGURIDAD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEGURIDAD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CRUD\sysdiagrams.cs">
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\UserState.cs">
-      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\USUARIO.cs">
-      <DependentUpon>BDSEGURIDAD.tt</DependentUpon>
+      <DependentUpon>SEGURIDAD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\USUARIOcrud.cs" />
     <Compile Include="Models\CRUD\USUARIOvista.cs" />
@@ -202,24 +266,24 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\bg.gif" />
-    <Content Include="Models\CRUD\BDSEGURIDAD.Context.tt">
+    <Content Include="Models\CRUD\SEGURIDAD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDSEGURIDAD.edmx</DependentUpon>
-      <LastGenOutput>BDSEGURIDAD.Context.cs</LastGenOutput>
+      <DependentUpon>SEGURIDAD.edmx</DependentUpon>
+      <LastGenOutput>SEGURIDAD.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\CRUD\BDSEGURIDAD.tt">
+    <Content Include="Models\CRUD\SEGURIDAD.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDSEGURIDAD.edmx</DependentUpon>
-      <LastGenOutput>BDSEGURIDAD.cs</LastGenOutput>
+      <DependentUpon>SEGURIDAD.edmx</DependentUpon>
+      <LastGenOutput>SEGURIDAD.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\CRUD\BDSEGURIDAD.edmx">
+    <EntityDeploy Include="Models\CRUD\SEGURIDAD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDSEGURIDAD.Designer.cs</LastGenOutput>
+      <LastGenOutput>SEGURIDAD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\CRUD\BDSEGURIDAD.edmx.diagram">
-      <DependentUpon>BDSEGURIDAD.edmx</DependentUpon>
+    <Content Include="Models\CRUD\SEGURIDAD.edmx.diagram">
+      <DependentUpon>SEGURIDAD.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -272,6 +336,28 @@
     <Content Include="Views\Persona\Agregar.cshtml" />
     <Content Include="Views\Persona\Actualizar.cshtml" />
     <Content Include="Views\Persona\Delete.cshtml" />
+    <Content Include="Views\Docente\Consultar.cshtml" />
+    <Content Include="Views\Materias\Consultar.cshtml" />
+    <Content Include="Views\Materias\Agregar.cshtml" />
+    <Content Include="Views\Docente\Borrar.cshtml" />
+    <Content Include="Views\Materias\Borrar.cshtml" />
+    <Content Include="Views\Materias\Actualizar.cshtml" />
+    <Content Include="Views\Docente\Actualizar.cshtml" />
+    <Content Include="Views\Docente\Agregar.cshtml" />
+    <Content Include="Views\Grupos\Consultar.cshtml" />
+    <Content Include="Views\Grupos\Actualizar.cshtml" />
+    <Content Include="Views\Grupos\Agregar.cshtml" />
+    <Content Include="Views\Alumnos\Actualizar.cshtml" />
+    <Content Include="Views\Alumnos\Agregar.cshtml" />
+    <Content Include="Views\Alumnos\Consultar.cshtml" />
+    <Content Include="Views\Alumnos_Horario\Consultar.cshtml" />
+    <Content Include="Views\Alumnos_Horario\Actualizar.cshtml" />
+    <Content Include="Views\Alumnos_Horario\Agregar.cshtml" />
+    <Content Include="Views\Horario_Materia\Consultar.cshtml" />
+    <Content Include="Views\Horario_Materia\Actualizar.cshtml" />
+    <Content Include="Views\Asistencia\Consultar.cshtml" />
+    <Content Include="Views\Horario_Materia\Agregar.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

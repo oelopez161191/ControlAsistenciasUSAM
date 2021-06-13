@@ -1,0 +1,45 @@
+﻿@model MVC_SEGURIDAD.Models.CRUD.HORARIOMATERIAcrudUpdate
+@{
+    ViewBag.Title = "Actualizar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Actualizar</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Actualizar", "Alumnos_Horario", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.HiddenFor(d => d.idcodigo_horariomateria)
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "tex-danger" })
+
+            <div>
+                @Html.LabelFor(d => d.horario)
+                @Html.TextBoxFor(d => d.horario, new { @class = "form-control" })
+                @Html.ValidationMessage("USUARIO", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.materia)
+                @Html.TextBoxFor(d => d.materia, new { @class = "form-control" })
+                @Html.ValidationMessage("PASSWORD", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(d => d.docente)
+                @Html.TextBoxFor(d => d.docente, new { @class = "form-control" })
+                @Html.ValidationMessage("RePASSWORD", new { @class = "text-danger" })
+            </div>
+
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+
+            </div>
+
+        }
+    </div>
+</div>

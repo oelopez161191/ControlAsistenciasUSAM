@@ -9,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,23 +36,33 @@
 
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            MVC_SEGURIDAD
+                            Usuario
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Usuarios", "Consultar", "Usuario")</li>
                             <li>@Html.ActionLink("Modulos", "Consultar", "Modulos")</li>
-                            <li>@Html.ActionLink("Operaciones", "Consultar", "Operaciones")</li>
-                            <li>@Html.ActionLink("Roles", "Consultar", "Roles")</li>
-                            <li>@Html.ActionLink("Personas", "Consultar", "Persona")</li>
+                            <li>@Html.ActionLink("Actualizar", "Actualizar", "Usuario")</li>
+                            <li>@Html.ActionLink("Borrar", "Borrar", "Usuario")</li>
+                            <li>@Html.ActionLink("Mostrar", "Consultar", "Usuario")</li>
                         </ul>
                     </li>
-               
-                    <li>@Html.ActionLink("Modulos", "Consultar", "Modulos")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Prueba", "Prueba", "Home")</li>    
-                   
-              
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Grupos
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Mostrar", "Consultar", "Grupos")</li>
+                            <li>@Html.ActionLink("Horarios", "Consultar", "Horarios")</li>
+                            <li>@Html.ActionLink("Alumnos", "Consultar", "Alumnos")</li>
+                            <li>@Html.ActionLink("Asistencias", "Consultar", "Asistencia")</li>
+                        </ul>
+                    </li>
+
+                    <li>@Html.ActionLink("Docentes", "Consultar", "Docente")</li>
+                    <li>@Html.ActionLink("Materias", "Consultar", "Materias")</li>
+                    <li>@Html.ActionLink("Alumnos", "Consultar", "Alumnos")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                                         
@@ -63,12 +73,15 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" style="position:fixed;">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
+
+        <div class="container panel-footer">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            </footer>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

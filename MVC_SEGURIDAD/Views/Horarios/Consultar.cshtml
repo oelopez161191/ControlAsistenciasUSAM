@@ -1,0 +1,37 @@
+﻿@model List<MVC_SEGURIDAD.Models.CRUD.HORARIOvista>
+@{
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consultar Alumno</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Horarios/Agregar")'" value="Nuevo" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Hora</th>
+            </tr>
+
+            @foreach (var oHora in Model)
+            {
+                <tr>
+                    <td>@oHora.id_horario</td>
+                    <td>@oHora.hora</td>
+                    <td>
+                        <input type="button" onclick="document.location.href='@Url.Content("~/Horarios/Delete/"+oHora.id_horario)'" value="Eliminar" class="btn btn-danger" />
+                    </td>
+
+                </tr>
+
+            }
+        </table>
+    </div>
+</div>

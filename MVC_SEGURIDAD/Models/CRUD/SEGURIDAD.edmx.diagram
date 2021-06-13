@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="39498c52fdac445497d437d66f5f23dc" Name="Diagram1">
+        <EntityTypeShape EntityType="SEGURIDADModel.Alumnos" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Alumnos_Horario" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Asistencia" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Docentes" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Grupos" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.horario" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Horario_Materia" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.Materia" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.MODULOS" Width="1.5" PointX="5.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.OPERACIONES" Width="1.5" PointX="7.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.PERSONAS" Width="1.5" PointX="15.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.ROL_OPERA" Width="1.5" PointX="10" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.ROLES" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.UserState" Width="1.5" PointX="10.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEGURIDADModel.USUARIO" Width="1.5" PointX="13" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Alumnos_Horario_Alumnos" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Alumnos_Horario_Grupos" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Asistencia_Alumnos_Horario" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_Docentes" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Grupos_Horario_Materia" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_horario" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_Horario_Materia_Materia" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_OPERACIONES_MODULOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_ROL_OPERA_OPERACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_PERSONAS_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_ROL_OPERA_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_USUARIO_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="SEGURIDADModel.FK_USUARIO_UserState" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
